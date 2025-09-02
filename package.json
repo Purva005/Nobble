@@ -2,7 +2,7 @@
   "name": "nobble",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://purva005.github.io/Nobble",
+  "homepage": "https://purva005/Nobble/public/index.html",
   "predeploy": "npm run build",
   "scripts": {
     "start": "react-scripts start",
