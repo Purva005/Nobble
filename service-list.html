@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Service List | NOBBLE</title>
+        <meta name="description" content="Tailwind CSS Multipurpose Landing Templates" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://nobble-html.vercel.app/service-list.html" />
+        <link rel="alternate" hreflang="x-default" href="https://nobble-html.vercel.app/service-list.html" />
+        <meta property="og:title" content="Service List | NOBBLE" />
+        <meta property="og:description" content="Tailwind CSS Multipurpose Landing Templates" />
+        <meta property="og:url" content="https://nobble-html.vercel.app/service-list.html" />
+        <meta property="og:site_name" content="NOBBLE" />
+        <meta property="og:image" content="https://nobble-html.vercel.app/assets/images/logo-light.svg" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="NOBBLE" />
+        <meta name="twitter:title" content="Service List | NOBBLE" />
+        <meta name="twitter:description" content="Tailwind CSS Multipurpose Landing Templates" />
+        <meta name="twitter:image" content="https://nobble-html.vercel.app/assets/images/logo-light.svg" />
+
+        <!-- Favicon -->
+        <link rel="icon" type="icon" href="assets/images/favicon.svg" />
+        <!-- Swiper Slider -->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+        <!-- accordion -->
+        <link rel="stylesheet" href="assets/css/accordion.min.css" />
+        <!-- Animation -->
+        <link rel="stylesheet" href="assets/css/aos.css" />
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+
+    <body>
+        <div id="root"></div>
+        <!-- screen loader -->
+        <div class="screen_loader fixed inset-0 z-60 grid place-content-center bg-[#fafafa] dark:bg-[#060818]">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="200px"
+                height="200px"
+                viewBox="0 0 100 100"
+                preserveAspectRatio="xMidYMid"
+            >
+                <circle cx="50" cy="50" r="0" fill="none" stroke="#6C54FF" stroke-width="4">
+                    <animate
+                        attributeName="r"
+                        repeatCount="indefinite"
+                        dur="1s"
+                        values="0;16"
+                        keyTimes="0;1"
+                        keySplines="0 0.2 0.8 1"
+                        calcMode="spline"
+                        begin="0s"
+                    ></animate>
+                    <animate
+                        attributeName="opacity"
+                        repeatCount="indefinite"
+                        dur="1s"
+                        values="1;0"
+                        keyTimes="0;1"
+                        keySplines="0.2 0 0.8 1"
+                        calcMode="spline"
+                        begin="0s"
+                    ></animate>
+                </circle>
+                <circle cx="50" cy="50" r="0" fill="none" stroke="#1A1036" stroke-width="4">
+                    <animate
+                        attributeName="r"
+                        repeatCount="indefinite"
+                        dur="1s"
+                        values="0;16"
+                        keyTimes="0;1"
+                        keySplines="0 0.2 0.8 1"
+                        calcMode="spline"
+                        begin="-0.5s"
+                    ></animate>
+                    <animate
+                        attributeName="opacity"
+                        repeatCount="indefinite"
+                        dur="1s"
+                        values="1;0"
+                        keyTimes="0;1"
+                        keySplines="0.2 0 0.8 1"
+                        calcMode="spline"
+                        begin="-0.5s"
+                    ></animate>
+                </circle>
+            </svg>
+        </div>
+
+        <div class="flex min-h-screen flex-col bg-white font-jakarta text-lg font-normal text-purple-500 antialiased dark:bg-secondary">
+            <img
+                src="assets/images/top-right-curv.svg"
+                alt="Arrow right"
+                class="absolute right-0 top-0 hidden lg:block"
+                data-aos="fade-down"
+                data-aos-duration="2000"
+            />
+            <!-- Header -->
+            <header id="header" class="fixed top-6 z-50 w-full duration-300">
+                <div class="container">
+                    <div class="header-main flex items-center rounded-lg bg-[#F8F7FF] px-4 py-3 duration-300 dark:bg-purple-800 lg:px-6 lg:py-0">
+                        <a href="index.html" class="w-24 shrink-0 sm:w-28 lg:w-[133px]">
+                            <img loading="lazy" src="assets/images/logo-light.svg" alt="Logo" class="inline-flex w-full dark:hidden" />
+                            <img loading="lazy" src="assets/images/logo-dark.svg" alt="Logo" class="hidden w-full dark:inline-flex" />
+                        </a>
+                        <div class="ms-auto flex items-center gap-10">
+                            <div
+                                class="navbar fixed end-full top-0 z-20 inline-flex h-full w-full items-center gap-10 duration-500 lg:static lg:h-auto lg:w-auto"
+                            >
+                                <button type="button" onclick="toggleMenu()" class="absolute right-5 top-5 h-12 w-12 text-white lg:hidden">
+                                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                        />
+                                    </svg>
+                                    <span class="sr-only">Close</span>
+                                </button>
+                                <ul class="group inline-flex h-full w-full flex-col items-center gap-8 gap-y-10 overflow-y-auto bg-secondary px-5 pb-10 pt-24 text-22 font-semibold text-white sm:text-3xl lg:w-auto lg:flex-row lg:overflow-y-visible lg:bg-transparent lg:p-0 lg:text-lg lg:text-purple-600 dark:lg:text-purple-500 xl:gap-10">
+                                    <li>
+                                     <a href="index.html" class="nav-link">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="service-list.html" class="nav-link active">Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="about-us.html" class="nav-link">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="faq.html" class="nav-link">FAQs</a>
+                                    </li>
+                                    <li class="inline-block lg:hidden">
+                                        <a href="contact.html" class="nav-link">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="inline-flex items-center gap-5 xl:gap-10">
+                                <button
+                                    type="button"
+                                    class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 bg-transparent duration-300 hover:bg-secondary ltr:border-primary ltr:text-secondary hover:ltr:border-secondary hover:ltr:text-white rtl:border-secondary rtl:bg-secondary rtl:text-white dark:ltr:text-white"
+                                    onclick="toggleDirection()"
+                                >
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M20 19.944H11.7207" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M17.8571 22L20 19.944L17.8571 17.8879"
+                                            stroke="currentColor"
+                                            stroke-width="1.6"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        <path d="M5 17.4207H13.2793" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path
+                                            d="M7.14288 19.4767L5 17.4206L7.14288 15.3645"
+                                            stroke="currentColor"
+                                            stroke-width="1.6"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        <path
+                                            d="M16.7855 2H9.82114C8.82657 2 7.87273 2.37909 7.16947 3.05387C6.4662 3.72866 6.07111 4.64386 6.07111 5.59815C6.07111 6.55244 6.4662 7.46764 7.16947 8.14242C7.87273 8.81721 8.82657 9.1963 9.82114 9.1963H10.3569"
+                                            stroke="currentColor"
+                                            stroke-width="1.6"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        <path d="M14.6421 13.3085V2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M10.3575 13.3085V2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <span class="sr-only">Switch Rtl/Ltr</span>
+                                </button>
+                                <label class="inline-flex cursor-pointer items-center">
+                                    <input type="checkbox" id="themeInput" class="mode-input peer h-0 w-0 opacity-0" />
+                                    <div
+                                        class="mode-btn relative h-10 w-20 rounded-full border-2 border-primary bg-transparent after:absolute after:left-1 after:top-1/2 after:h-8 after:w-8 after:-translate-y-1/2 after:rounded-full after:bg-primary peer-checked:after:left-auto peer-checked:after:right-1"
+                                        onclick="toggleTheme()"
+                                    >
+                                        <span class="absolute left-2 top-1/2 z-1 w-6 -translate-y-1/2 text-white">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19Z"
+                                                    fill="currentColor"
+                                                />
+                                                <path
+                                                    d="M12 22.96C11.45 22.96 11 22.55 11 22V21.92C11 21.37 11.45 20.92 12 20.92C12.55 20.92 13 21.37 13 21.92C13 22.47 12.55 22.96 12 22.96ZM19.14 20.14C18.88 20.14 18.63 20.04 18.43 19.85L18.3 19.72C17.91 19.33 17.91 18.7 18.3 18.31C18.69 17.92 19.32 17.92 19.71 18.31L19.84 18.44C20.23 18.83 20.23 19.46 19.84 19.85C19.65 20.04 19.4 20.14 19.14 20.14ZM4.86 20.14C4.6 20.14 4.35 20.04 4.15 19.85C3.76 19.46 3.76 18.83 4.15 18.44L4.28 18.31C4.67 17.92 5.3 17.92 5.69 18.31C6.08 18.7 6.08 19.33 5.69 19.72L5.56 19.85C5.37 20.04 5.11 20.14 4.86 20.14ZM22 13H21.92C21.37 13 20.92 12.55 20.92 12C20.92 11.45 21.37 11 21.92 11C22.47 11 22.96 11.45 22.96 12C22.96 12.55 22.55 13 22 13ZM2.08 13H2C1.45 13 1 12.55 1 12C1 11.45 1.45 11 2 11C2.55 11 3.04 11.45 3.04 12C3.04 12.55 2.63 13 2.08 13ZM19.01 5.99C18.75 5.99 18.5 5.89 18.3 5.7C17.91 5.31 17.91 4.68 18.3 4.29L18.43 4.16C18.82 3.77 19.45 3.77 19.84 4.16C20.23 4.55 20.23 5.18 19.84 5.57L19.71 5.7C19.52 5.89 19.27 5.99 19.01 5.99ZM4.99 5.99C4.73 5.99 4.48 5.89 4.28 5.7L4.15 5.56C3.76 5.17 3.76 4.54 4.15 4.15C4.54 3.76 5.17 3.76 5.56 4.15L5.69 4.28C6.08 4.67 6.08 5.3 5.69 5.69C5.5 5.89 5.24 5.99 4.99 5.99ZM12 3.04C11.45 3.04 11 2.63 11 2.08V2C11 1.45 11.45 1 12 1C12.55 1 13 1.45 13 2C13 2.55 12.55 3.04 12 3.04Z"
+                                                    fill="currentColor"
+                                                />
+                                            </svg>
+                                            <span class="sr-only">Light mode</span>
+                                        </span>
+                                        <span class="absolute right-2 top-1/2 z-1 w-6 -translate-y-1/2 text-primary/50">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M21.53 15.93C21.37 15.66 20.92 15.24 19.8 15.44C19.18 15.55 18.55 15.6 17.92 15.57C15.59 15.47 13.48 14.4 12.01 12.75C10.71 11.3 9.90995 9.40999 9.89995 7.36999C9.89995 6.22999 10.12 5.12999 10.57 4.08999C11.01 3.07999 10.7 2.54999 10.48 2.32999C10.25 2.09999 9.70995 1.77999 8.64995 2.21999C4.55995 3.93999 2.02995 8.03999 2.32995 12.43C2.62995 16.56 5.52995 20.09 9.36995 21.42C10.29 21.74 11.26 21.93 12.26 21.97C12.42 21.98 12.58 21.99 12.74 21.99C16.09 21.99 19.23 20.41 21.21 17.72C21.88 16.79 21.7 16.2 21.53 15.93Z"
+                                                    fill="currentColor"
+                                                />
+                                            </svg>
+                                            <span class="sr-only">Dark mode</span>
+                                        </span>
+                                    </div>
+                                </label>
+                                <a href="contact-us.html" class="btn hidden shrink-0 lg:inline-flex">Contact us</a>
+                                <button type="button" onclick="toggleMenu()" class="inline-block space-y-1 lg:hidden">
+                                    <span class="flex h-0.5 w-7 rounded-full bg-primary"></span>
+                                    <span class="flex h-0.5 w-7 rounded-full bg-primary"></span>
+                                    <span class="flex h-0.5 w-7 rounded-full bg-primary"></span>
+                                    <span class="flex h-0.5 w-7 rounded-full bg-primary"></span>
+                                    <span class="sr-only">Menu</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Inner Content -->
+            <div class="pt-24 lg:pt-32">
+                <div class="relative overflow-x-hidden py-16 lg:pb-28 xl:pt-36">
+                    <img
+                        src="assets/images/digital-market-bg.svg"
+                        alt="Digital marketing bg"
+                        class="absolute top-12"
+                        data-aos="slide-right"
+                        data-aos-duration="3000"
+                    />
+                    <div class="mx-auto max-w-[1142px] px-4">
+                        <div class="mx-auto pb-10 text-center lg:px-10 lg:pb-16">
+                            <h1 class="mb-8 text-4xl font-extrabold text-purple-700 dark:text-white md:mb-12 lg:text-7xl/tight">Service at Your Doorstep.</h1>
+                            <p class="text-lg md:text-22">
+                                We help hyperlocal businesses scale by managing every touchpoint—ads, bookings, reviews, payments, and customer re-engagement—seamlessly.
+                            </p>
+                        </div>
+                        <div class="relative grid items-start gap-4 text-center leading-6 sm:grid-cols-2 md:gap-x-[30px] md:gap-y-12 lg:grid-cols-3">
+                            <img loading="lazy" src="assets/images/high-impact-round.svg" alt="Impact round" class="absolute -right-24 top-0 animate-spin" />
+                            <span class="absolute -bottom-10 -left-1/2 md:-left-1/3 md:bottom-0" data-aos="fade-right" data-aos-duration="1000">
+                                <svg width="497" height="166" viewBox="0 0 497 166" fill="none">
+                                    <path
+                                        opacity="0.2"
+                                        d="M0 164H464.69C481.259 164 494.69 150.569 494.69 134V2"
+                                        stroke="url(#paint0_radial_112_223)"
+                                        stroke-width="3"
+                                        stroke-linecap="round"
+                                    />
+                                    <defs>
+                                        <radialGradient
+                                            id="paint0_radial_112_223"
+                                            cx="0"
+                                            cy="0"
+                                            r="1"
+                                            gradientUnits="userSpaceOnUse"
+                                            gradientTransform="translate(485.5 164) rotate(180) scale(356.5 163.113)"
+                                        >
+                                            <stop stop-color="#806BFF" />
+                                            <stop offset="1" stop-color="#806BFF" stop-opacity="0" />
+                                        </radialGradient>
+                                    </defs>
+                                </svg>
+                            </span>
+                            <div class="rounded-lg shadow-[0_0_8px_rgba(0,0,0,0.1)]" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="group relative overflow-hidden p-0.5">
+                                    <div class="bg-gradient green absolute inset-0 opacity-0 duration-500 group-hover:opacity-100"></div>
+                                    <div class="relative z-[1] rounded-lg bg-white px-4 py-10 dark:bg-purple-900 md:px-7">
+                                        <a href="service-detail.html" class="absolute inset-0"></a>
+                                        <div class="inline-flex h-20 w-20 items-center justify-center rounded-full bg-green/20">
+                                            <img loading="lazy" src="assets/images/website-optimization.svg" alt="Website optimization" />
+                                        </div>
+                                        <h3 class="pb-6 pt-10 text-22 font-semibold text-purple-700 dark:text-white">Home Repairs & Maintenance</h3>
+                                        <p class="mb-11 line-clamp-1 font-light text-purple-600 dark:text-purple-500">
+                                            Plumbing (Leak Fix, Tap Installation, etc.), Electrician (Fan Repair, Light Installation), Cleaning (Bathroom, Kitchen, Sofa)
+                                        </p>
+                                        <span class="mx-auto block h-[3px] w-28 rounded-full bg-green"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rounded-lg shadow-[0_0_8px_rgba(0,0,0,0.1)] md:mt-10" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="group relative overflow-hidden p-0.5">
+                                    <div class="bg-gradient purple absolute inset-0 opacity-0 duration-500 group-hover:opacity-100"></div>
+                                    <div class="relative z-[1] rounded-lg bg-white px-4 py-10 dark:bg-purple-900 md:px-7">
+                                        <a href="service-detail.html" class="absolute inset-0"></a>
+                                        <div class="inline-flex h-20 w-20 items-center justify-center rounded-full bg-purple/20">
+                                            <img loading="lazy" src="assets/images/paid-media.svg" alt="Paid media" />
+                                        </div>
+                                        <h3 class="pb-6 pt-10 text-22 font-semibold text-purple-700 dark:text-white">Beauty & Wellness at Home</h3>
+                                        <p class="mb-11 line-clamp-1 font-light text-purple-600 dark:text-purple-500">
+                                            Salon for Women (Facials, Waxing, Haircuts), Men Services (Haircut, Beard Styling, Massage), Spa & Relaxation (Swedish Massage, Foot Spa)
+                                        </p>
+                                        <span class="mx-auto block h-[3px] w-28 rounded-full bg-purple"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rounded-lg shadow-[0_0_8px_rgba(0,0,0,0.1)] md:-mt-10 lg:mt-20" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="group relative overflow-hidden p-0.5">
+                                    <div class="bg-gradient red absolute inset-0 opacity-0 duration-500 group-hover:opacity-100"></div>
+                                    <div class="relative z-[1] rounded-lg bg-white px-4 py-10 dark:bg-purple-900 md:px-7">
+                                        <a href="service-detail.html" class="absolute inset-0"></a>
+                                        <div class="inline-flex h-20 w-20 items-center justify-center rounded-full bg-red/20">
+                                            <img loading="lazy" src="assets/images/email-sms-marketing.svg" alt="Email marketing" />
+                                        </div>
+                                        <h3 class="pb-6 pt-10 text-22 font-semibold text-purple-700 dark:text-white">Appliance Repairs</h3>
+                                        <p class="mb-11 line-clamp-1 font-light text-purple-600 dark:text-purple-500">
+                                            TV, AC, Refrigerator, Washing Machine, Installation & Uninstallation, and other electrical home appliances.
+                                        </p>
+                                        <span class="mx-auto block h-[3px] w-28 rounded-full bg-red"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rounded-lg shadow-[0_0_8px_rgba(0,0,0,0.1)] md:mt-0 lg:-mt-20" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="group relative overflow-hidden p-0.5">
+                                    <div class="bg-gradient pink absolute inset-0 opacity-0 duration-500 group-hover:opacity-100"></div>
+                                    <div class="relative z-[1] rounded-lg bg-white px-4 py-10 dark:bg-purple-900 md:px-7">
+                                        <a href="service-detail.html" class="absolute inset-0"></a>
+                                        <div class="inline-flex h-20 w-20 items-center justify-center rounded-full bg-pink/20">
+                                            <img loading="lazy" src="assets/images/funnel-optimization.svg" alt="Funnel optimization" />
+                                        </div>
+                                        <h3 class="pb-6 pt-10 text-22 font-semibold text-purple-700 dark:text-white">Home Services</h3>
+                                        <p class="mb-11 line-clamp-3 font-light text-purple-600 dark:text-purple-500">
+                                            Deep Cleaning (Full Home, Kitchen, Bathroom), Pest Control (Cockroach, Termites, Bed Bugs), Packers & Movers
+                                        </p>
+                                        <span class="mx-auto block h-[3px] w-28 rounded-full bg-pink"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rounded-lg shadow-[0_0_8px_rgba(0,0,0,0.1)] md:-mt-10" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="group relative overflow-hidden p-0.5">
+                                    <div class="bg-gradient yellow absolute inset-0 opacity-0 duration-500 group-hover:opacity-100"></div>
+                                    <div class="relative z-[1] rounded-lg bg-white px-4 py-10 dark:bg-purple-900 md:px-7">
+                                        <a href="service-detail.html" class="absolute inset-0"></a>
+                                        <div class="inline-flex h-20 w-20 items-center justify-center rounded-full bg-yellow/20">
+                                            <img loading="lazy" src="assets/images/advanced-analytics.svg" alt="Advanced analytics" />
+                                        </div>
+                                        <h3 class="pb-6 pt-10 text-22 font-semibold text-purple-700 dark:text-white">Events & Occasions</h3>
+                                        <p class="mb-11 line-clamp-3 font-light text-purple-600 dark:text-purple-500">
+                                            Photographers, Makeup Artists, Birthday & Party Planners
+                                        </p>
+                                        <span class="mx-auto block h-[3px] w-28 rounded-full bg-yellow"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative rounded-lg bg-secondary px-4 py-10 dark:bg-primary md:px-7" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="inline-flex h-20 w-20 items-center justify-center rounded-full bg-white/10">
+                                    <img loading="lazy" src="assets/images/all-services.svg" alt="Services" />
+                                </div>
+                                <h3 class="pb-6 pt-10 text-22 font-semibold text-white">Easy Search & Discovery</h3>
+                                <p class="mb-11 line-clamp-3 font-light text-purple-400">
+                                    Browse services by category, popularity, or availability.
+                                </p>
+                                <a
+                                    href="service-list.html"
+                                    class="btn inline-flex bg-white text-primary hover:bg-primary hover:text-white dark:hover:bg-secondary"
+                                    >Browse services</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="mx-auto max-w-[1142px] px-4">
+                    <div class="relative mx-auto pb-10 text-center lg:px-48 lg:pb-12">
+                        <img loading="lazy" src="assets/images/blue-star.svg" alt="Blue star" class="absolute hidden md:block lg:bottom-12 lg:start-12" />
+                        <img loading="lazy" src="assets/images/purple-star.svg" alt="Purple star" class="absolute end-0 top-0 hidden md:block" />
+                        <h2 class="mb-5 text-[26px]/7 font-bold text-purple-700 dark:text-white">All Your Home & Personal Services — One App Away.</h2>
+                        <p class="text-lg md:text-xl">
+                            Book trusted professionals for plumbing, salon, cleaning & more — anytime, anywhere.
+                        </p>
+                    </div>
+                    <ul
+                        class="filters flex grid-cols-3 gap-7 overflow-x-auto whitespace-nowrap px-4 py-4 text-lg font-semibold text-purple-700 dark:text-purple-600 md:text-xl lg:grid lg:overflow-x-visible lg:px-0"
+                    >
+                        <li class="active filter" data-filter="first">
+                            <button
+                                class="w-full rounded-lg border border-white bg-white p-4 text-center shadow-[0_0_8px_rgba(0,0,0,0.1)] duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-purple-900 dark:bg-purple-900 dark:hover:border-primary md:p-7"
+                            >
+                                1. Local Content Bookings
+                            </button>
+                        </li>
+                        <li class="filter" data-filter="second">
+                            <button
+                                class="w-full rounded-lg border border-white bg-white p-4 text-center shadow-[0_0_8px_rgba(0,0,0,0.1)] duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-purple-900 dark:bg-purple-900 dark:hover:border-primary md:p-7"
+                            >
+                                2. Data‑driven City Strategy
+                            </button>
+                        </li>
+                        <li class="filter" data-filter="third">
+                            <button
+                                class="w-full rounded-lg border border-white bg-white p-4 text-center shadow-[0_0_8px_rgba(0,0,0,0.1)] duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary dark:border-purple-900 dark:bg-purple-900 dark:hover:border-primary md:p-7"
+                            >
+                                3. App & Booking UX
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="projects pt-14 lg:pt-24">
+                        <div class="project" data-filter="first">
+                            <div class="flex flex-col items-start gap-x-20 gap-y-10 lg:flex-row">
+                                <div class="mx-auto shrink-0 overflow-hidden rounded-xl shadow-[0_1px_15px_rgba(0,0,0,.1)] md:w-2/5">
+                                    <img loading="lazy" src="assets/images/content-get-traffic.jpg" alt="Content traffic" class="h-full w-full object-cover" />
+                                </div>
+                                <div class="text-center lg:pe-20 lg:ltr:text-left lg:rtl:text-right">
+                                    <div class="space-y-4">
+                                        <h3 class="text-22 font-semibold text-purple-700 dark:text-white">
+                                            Local service pages that rank & convert
+                                        </h3>
+                                        <p class="text-xl/tight">
+                                            Create SEO‑ready pages for every city + service. We add FAQs, pricing blocks, before/after photos, rich snippets, and neighborhood keywords so you show up first and convert faster.
+                                        </p>
+                                    </div>
+                                    <div class="my-12 flex justify-center gap-4 md:gap-24 lg:justify-start">
+                                        <div class="space-y-4">
+                                            <h4
+                                                class="text-[40px] font-extrabold leading-tight text-green"
+                                                data-vanilla-counter
+                                                data-start-at="0"
+                                                data-end-at="4.8"
+                                                data-time="2000"
+                                                data-delay="1000"
+                                                data-format="{}k"
+                                            ></h4>
+                                            <div class="text-xl font-medium">Bookings</div>
+                                        </div>
+                                        <div class="space-y-4">
+                                            <h4
+                                                class="text-[40px] font-extrabold leading-tight text-pink"
+                                                data-vanilla-counter
+                                                data-start-at="0"
+                                                data-end-at="15"
+                                                data-time="4000"
+                                                data-delay="1000"
+                                                data-format="{}+"
+                                            ></h4>
+                                            <div class="text-xl font-medium">Cities Optimized</div>
+                                        </div>
+                                    </div>
+                                    <a href="contact-us.html" class="btn inline-flex">Start free trial</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project hidden" data-filter="second">
+                            <div class="flex flex-col items-start gap-x-20 gap-y-10 lg:flex-row">
+                                <div class="mx-auto shrink-0 overflow-hidden rounded-xl shadow-[0_1px_15px_rgba(0,0,0,.1)] md:w-2/5 lg:order-2">
+                                    <img
+                                        loading="lazy"
+                                        src="assets/images/data-driven-strategy.jpg"
+                                        alt="Data driven strategy"
+                                        class="h-full w-full object-cover"
+                                    />
+                                </div>
+                                <div class="text-center lg:pe-20 lg:ltr:text-left lg:rtl:text-right">
+                                    <div class="mb-16 space-y-4">
+                                        <h5 class="text-22 font-semibold text-purple-700 dark:text-white">
+                                            Pin‑code insights. Smarter growth.
+                                        </h5>
+                                        <p class="text-xl/tight">
+                                            Track demand by area & time slot, identify top‑converting categories, and run pricing/offer experiments. Our dashboards tie rankings → clicks → completed jobs, so you scale the right services in the right localities.
+                                        </p>
+                                    </div>
+                                    <a href="service-detail.html" class="btn inline-flex">Learn more</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project hidden" data-filter="third">
+                            <div class="flex flex-col items-start gap-x-20 gap-y-10 lg:flex-row">
+                                <div class="mx-auto shrink-0 overflow-hidden rounded-xl shadow-[0_1px_15px_rgba(0,0,0,.1)] md:w-2/5">
+                                    <img
+                                        loading="lazy"
+                                        src="assets/images/design-app-software.jpg"
+                                        alt="Design app software"
+                                        class="h-full w-full object-cover"
+                                    />
+                                </div>
+                                <div class="text-center lg:pe-20 lg:ltr:text-left lg:rtl:text-right">
+                                    <div class="mb-16 space-y-4">
+                                        <h5 class="text-22 font-semibold text-purple-700 dark:text-white">
+                                            Design that turns visits into visits booked
+                                        </h5>
+                                        <p class="text-xl/tight">
+                                            Lightning‑fast slot selection, saved addresses, one‑tap rebook, and secure UPI/card checkout. Trust badges, pro ratings, and clear pricing reduce drop‑offs and boost completion.
+                                        </p>
+                                    </div>
+                                    <a href="contact-us.html" class="btn inline-flex">Let&apos;s talk</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><br><hr><br><br>
+
+                <div class="pb-16 lg:pb-36">
+                    <div class="mx-auto max-w-[1142px] px-4">
+                        <div class="mx-auto pb-14 text-center lg:w-2/3 lg:pb-24">
+                            <h2 class="mb-5 text-[26px]/7 font-bold text-purple-700 dark:text-white">Choose your plan</h2>
+                            <p class="text-lg md:text-xl">Flexible Plans for Individuals, Families & Frequent Users</p>
+                        </div>
+                        <div class="grid gap-x-[30px] gap-y-12 md:grid-cols-2 lg:grid-cols-3">
+                            <div
+                                class="relative flex flex-col justify-between rounded-[32px] border border-purple-200 bg-purple-100 px-5 pb-6 pt-9 dark:border-purple-800 dark:bg-secondary"
+                            >
+                                <div
+                                    class="absolute -top-5 left-1/2 min-w-[110px] -translate-x-1/2 rounded-full bg-pink px-4 py-2 text-center font-bold text-secondary"
+                                >
+                                    Elite
+                                </div>
+                                <div>
+                                    <div class="flex items-center justify-between gap-3 border-b border-purple-300 py-6 dark:border-purple-700">
+                                        <div class="inline-flex items-center gap-4">
+                                            <span>
+                                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none">
+                                                    <path
+                                                        d="M28.8167 7.40013L28.7 13.7168C28.6833 14.5835 29.2334 15.7335 29.9334 16.2501L34.0667 19.3835C36.7167 21.3835 36.2834 23.8335 33.1167 24.8335L27.7334 26.5168C26.8334 26.8001 25.8834 27.7835 25.6501 28.7001L24.3667 33.6001C23.35 37.4668 20.8167 37.8501 18.7167 34.4501L15.7833 29.7001C15.25 28.8335 13.9833 28.1835 12.9833 28.2335L7.41672 28.5168C3.43339 28.7168 2.30004 26.4168 4.90004 23.3835L8.20001 19.5501C8.81668 18.8335 9.1 17.5001 8.81667 16.6001L7.13342 11.2168C6.15008 8.05012 7.91673 6.30014 11.0667 7.33348L15.9834 8.95015C16.8168 9.21681 18.0667 9.03346 18.7667 8.5168L23.9001 4.8168C26.6668 2.81679 28.8833 3.98347 28.8167 7.40013Z"
+                                                        fill="#FF3AC8"
+                                                    />
+                                                    <path
+                                                        opacity="0.4"
+                                                        d="M35.7333 34.6166L30.6832 29.5666C30.1999 29.0833 29.3999 29.0833 28.9166 29.5666C28.4332 30.0499 28.4332 30.8499 28.9166 31.3333L33.9666 36.3833C34.2166 36.6333 34.5332 36.7499 34.8499 36.7499C35.1666 36.7499 35.4833 36.6333 35.7333 36.3833C36.2166 35.8999 36.2166 35.0999 35.7333 34.6166Z"
+                                                        fill="#FF3AC8"
+                                                    />
+                                                </svg>
+                                            </span>
+                                            <div class="space-y-2 font-semibold">
+                                                <h3 class="text-xl text-purple-700 dark:text-white">Basic</h3>
+                                                <div class="text-sm text-purple-600"><span class="text-purple-400">Limited Services</div>
+                                            </div>
+                                        </div>
+                                        <span class="text-22 font-extrabold text-purple-700 dark:text-white">Free</span>
+                                    </div>
+                                    <div class="py-6">
+                                        <ul class="space-y-5 dark:text-purple-600">
+                                            <li class="flex gap-3 text-purple-700 dark:text-white">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            opacity="0.4"
+                                                            d="M15.48 10.7702L11.69 15.8202H6.08C5.12 15.8202 4.64 14.6602 5.32 13.9802L10.5 8.80023C11.33 7.97023 12.68 7.97023 13.51 8.80023L15.48 10.7702Z"
+                                                            fill="#FF3AC8"
+                                                        />
+                                                        <path
+                                                            d="M17.92 15.82H11.69L15.48 10.77L18.69 13.98C19.36 14.66 18.88 15.82 17.92 15.82Z"
+                                                            fill="#FF3AC8"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                                <span>Book from 50+ home & personal services</span>
+                                            </li>
+                                            <li class="flex gap-3 text-purple-700 dark:text-white">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            opacity="0.4"
+                                                            d="M15.48 10.7702L11.69 15.8202H6.08C5.12 15.8202 4.64 14.6602 5.32 13.9802L10.5 8.80023C11.33 7.97023 12.68 7.97023 13.51 8.80023L15.48 10.7702Z"
+                                                            fill="#FF3AC8"
+                                                        />
+                                                        <path
+                                                            d="M17.92 15.82H11.69L15.48 10.77L18.69 13.98C19.36 14.66 18.88 15.82 17.92 15.82Z"
+                                                            fill="#FF3AC8"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                                <span>Access verified professionals</span>
+                                            </li>
+                                            <li class="flex gap-3">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            opacity="0.4"
+                                                            d="M15.48 10.7702L11.69 15.8202H6.08C5.12 15.8202 4.64 14.6602 5.32 13.9802L10.5 8.80023C11.33 7.97023 12.68 7.97023 13.51 8.80023L15.48 10.7702Z"
+                                                            fill="#8C879A"
+                                                        />
+                                                        <path
+                                                            d="M17.92 15.82H11.69L15.48 10.77L18.69 13.98C19.36 14.66 18.88 15.82 17.92 15.82Z"
+                                                            fill="#8C879A"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                                <span>Instant booking with real-time slots</span>
+                                            </li>
+                                            <li class="flex gap-3">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            opacity="0.4"
+                                                            d="M15.48 10.7702L11.69 15.8202H6.08C5.12 15.8202 4.64 14.6602 5.32 13.9802L10.5 8.80023C11.33 7.97023 12.68 7.97023 13.51 8.80023L15.48 10.7702Z"
+                                                            fill="#8C879A"
+                                                        />
+                                                        <path
+                                                            d="M17.92 15.82H11.69L15.48 10.77L18.69 13.98C19.36 14.66 18.88 15.82 17.92 15.82Z"
+                                                            fill="#8C879A"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                                <span>No discounts or bundled offers</span>
+                                            </li>
+                                            <li class="flex gap-3">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            opacity="0.4"
+                                                            d="M15.48 10.7702L11.69 15.8202H6.08C5.12 15.8202 4.64 14.6602 5.32 13.9802L10.5 8.80023C11.33 7.97023 12.68 7.97023 13.51 8.80023L15.48 10.7702Z"
+                                                            fill="#8C879A"
+                                                        />
+                                                        <path
+                                                            d="M17.92 15.82H11.69L15.48 10.77L18.69 13.98C19.36 14.66 18.88 15.82 17.92 15.82Z"
+                                                            fill="#8C879A"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                                <span>No priority customer support</span>
+                                            </li>
+                                            <li class="flex gap-3">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            opacity="0.4"
+                                                            d="M15.48 10.7702L11.69 15.8202H6.08C5.12 15.8202 4.64 14.6602 5.32 13.9802L10.5 8.80023C11.33 7.97023 12.68 7.97023 13.51 8.80023L15.48 10.7702Z"
+                                                            fill="#8C879A"
+                                                        />
+                                                        <path
+                                                            d="M17.92 15.82H11.69L15.48 10.77L18.69 13.98C19.36 14.66 18.88 15.82 17.92 15.82Z"
+                                                            fill="#8C879A"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                                <span>Limited rescheduling</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="border-t border-purple-300 pt-6 dark:border-purple-700">
+                                    <a href="javascript:" class="btn block rounded-[10px] bg-purple-300 text-purple-700 hover:bg-secondary hover:text-white">
+                                        Choose your plan
+                                    </a>
+                                </div>
+                            </div>
+                            <div
+                                class="relative flex flex-col justify-between rounded-[32px] border border-purple-200 bg-secondary px-5 pb-6 pt-9 dark:border-purple-900 dark:bg-purple-900"
+                            >
+                                <div
+                                    class="absolute -top-5 left-1/2 min-w-[110px] -translate-x-1/2 rounded-full bg-yellow px-4 py-2 text-center font-bold text-secondary"
+                                >
+                                    Special
+                                </div>
+                                <div>
+                                    <div class="flex items-center justify-between gap-3 border-b border-purple-700 py-6 text-white">
+                                        <div class="inline-flex items-center gap-4">
+                                            <span>
+                                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none">
+                                                    <path
+                                                        d="M36.6667 10.0167V25.9833C36.6667 30.5833 32.9333 34.3167 28.3333 34.3167H11.6667C10.9 34.3167 10.1667 34.2167 9.44999 34.0167C8.41665 33.7333 8.08332 32.4167 8.84999 31.65L26.5667 13.9333C26.9333 13.5667 27.4833 13.4833 28 13.5833C28.5333 13.6833 29.1167 13.5333 29.5333 13.1333L33.8167 8.83333C35.3833 7.26666 36.6667 7.78333 36.6667 10.0167Z"
+                                                        fill="#FFD02C"
+                                                    />
+                                                    <path
+                                                        opacity="0.4"
+                                                        d="M24.4 12.7667L6.95001 30.2167C6.15001 31.0167 4.81668 30.8167 4.28334 29.8167C3.66668 28.6834 3.33334 27.3667 3.33334 25.9834V10.0167C3.33334 7.78337 4.61668 7.2667 6.18334 8.83337L10.4833 13.15C11.1333 13.7834 12.2 13.7834 12.85 13.15L18.8167 7.1667C19.4667 6.5167 20.5333 6.5167 21.1833 7.1667L24.4167 10.4C25.05 11.05 25.05 12.1167 24.4 12.7667Z"
+                                                        fill="#FFD02C"
+                                                    />
+                                                </svg>
+                                            </span>
+                                            <div class="space-y-2 font-semibold">
+                                                <h3 class="text-xl">Smart (Popular)</h3>
+                                                <div class="text-sm text-purple-600"><span class="text-purple-400">For regular users</div>
+                                            </div>
+                                        </div>
+                                        <span class="text-22 font-extrabold">₹199/ Month</span>
+                                    </div>
+                                    <div class="py-6">
+                                        <ul class="space-y-5 dark:text-purple-600">
+                                            <li class="flex gap-3 text-white">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            opacity="0.4"
+                                                            d="M15.48 10.7702L11.69 15.8202H6.07999C5.11999 15.8202 4.63999 14.6602 5.31999 13.9802L10.5 8.80023C11.33 7.97023 12.68 7.97023 13.51 8.80023L15.48 10.7702Z"
+                                                            fill="#FFD02C"
+                                                        />
+                                                        <path
+                                                            d="M17.92 15.82H11.69L15.48 10.77L18.69 13.98C19.36 14.66 18.88 15.82 17.92 15.82Z"
+                                                            fill="#FFD02C"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                                <span>Unlimited bookings</span>
+                                            </li>
+                                            <li class="flex gap-3 text-white">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            opacity="0.4"
+                                                            d="M15.48 10.7702L11.69 15.8202H6.07999C5.11999 15.8202 4.63999 14.6602 5.31999 13.9802L10.5 8.80023C11.33 7.97023 12.68 7.97023 13.51 8.80023L15.48 10.7702Z"
+                                                            fill="#FFD02C"
+                                                        />
+                                                        <path
+                                                            d="M17.92 15.82H11.69L15.48 10.77L18.69 13.98C19.36 14.66 18.88 15.82 17.92 15.82Z"
+                                                            fill="#FFD02C"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                                <span>10% off on every service</span>
+                                            </li>
+                                            <li class="flex gap-3 text-white">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            opacity="0.4"
+                                                            d="M15.48 10.7702L11.69 15.8202H6.07999C5.11999 15.8202 4.63999 14.6602 5.31999 13.9802L10.5 8.80023C11.33 7.97023 12.68 7.97023 13.51 8.80023L15.48 10.7702Z"
+                                                            fill="#FFD02C"
+                                                        />
+                                                        <path
+                                                            d="M17.92 15.82H11.69L15.48 10.77L18.69 13.98C19.36 14.66 18.88 15.82 17.92 15.82Z"
+                                                            fill="#FFD02C"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                                <span>24/7 customer support</span>
+                                            </li>
+                                            <li class="flex gap-3 text-white">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            opacity="0.4"
+                                                            d="M15.48 10.7702L11.69 15.8202H6.07999C5.11999 15.8202 4.63999 14.6602 5.31999 13.9802L10.5 8.80023C11.33 7.97023 12.68 7.97023 13.51 8.80023L15.48 10.7702Z"
+                                                            fill="#FFD02C"
+                                                        />
+                                                        <path
+                                                            d="M17.92 15.82H11.69L15.48 10.77L18.69 13.98C19.36 14.66 18.88 15.82 17.92 15.82Z"
+                                                            fill="#FFD02C"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                                <span>1 free reschedule/month</span>
+                                            </li>
+                                            <li class="flex gap-3 text-purple-600">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            opacity="0.4"
+                                                            d="M15.48 10.7702L11.69 15.8202H6.08C5.12 15.8202 4.64 14.6602 5.32 13.9802L10.5 8.80023C11.33 7.97023 12.68 7.97023 13.51 8.80023L15.48 10.7702Z"
+                                                            fill="#8C879A"
+                                                        />
+                                                        <path
+                                                            d="M17.92 15.82H11.69L15.48 10.77L18.69 13.98C19.36 14.66 18.88 15.82 17.92 15.82Z"
+                                                            fill="#8C879A"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                                <span>No group/family sharing</span>
+                                            </li>
+                                            <li class="flex gap-3 text-purple-600">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            opacity="0.4"
+                                                            d="M15.48 10.7702L11.69 15.8202H6.08C5.12 15.8202 4.64 14.6602 5.32 13.9802L10.5 8.80023C11.33 7.97023 12.68 7.97023 13.51 8.80023L15.48 10.7702Z"
+                                                            fill="#8C879A"
+                                                        />
+                                                        <path
+                                                            d="M17.92 15.82H11.69L15.48 10.77L18.69 13.98C19.36 14.66 18.88 15.82 17.92 15.82Z"
+                                                            fill="#8C879A"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                                <span>No discounts or bundled offers</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="border-t border-purple-700 pt-6">
+                                    <a
+                                        href="javascript:"
+                                        class="btn block rounded-[10px] bg-purple-700 hover:bg-white hover:text-secondary dark:hover:bg-white"
+                                    >
+                                        Choose your plan
+                                    </a>
+                                </div>
+                            </div>
+                            <div
+                                class="relative flex flex-col justify-between rounded-[32px] border border-purple-200 bg-purple-100 px-5 pb-6 pt-9 dark:border-purple-800 dark:bg-secondary"
+                            >
+                                <div
+                                    class="absolute -top-5 left-1/2 min-w-[110px] -translate-x-1/2 rounded-full bg-green px-4 py-2 text-center font-bold text-secondary"
+                                >
+                                    Pro Plan
+                                </div>
+                                <div>
+                                    <div class="flex items-center justify-between gap-3 border-b border-purple-300 py-6 dark:border-purple-700">
+                                        <div class="inline-flex items-center gap-4">
+                                            <span>
+                                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none">
+                                                    <path
+                                                        opacity="0.4"
+                                                        d="M19.95 37.1668C29.1547 37.1668 36.6167 29.7049 36.6167 20.5002C36.6167 11.2954 29.1547 3.8335 19.95 3.8335C10.7452 3.8335 3.28333 11.2954 3.28333 20.5002C3.28333 29.7049 10.7452 37.1668 19.95 37.1668Z"
+                                                        fill="#31D2AC"
+                                                    />
+                                                    <path
+                                                        d="M25.4167 19.3335H22.5833V12.7335C22.5833 11.2001 21.75 10.8835 20.7333 12.0335L20 12.8668L13.8 19.9168C12.95 20.8835 13.3 21.6668 14.5833 21.6668H17.4167V28.2668C17.4167 29.8001 18.25 30.1168 19.2667 28.9668L20 28.1335L26.2 21.0835C27.05 20.1168 26.7 19.3335 25.4167 19.3335Z"
+                                                        fill="#31D2AC"
+                                                    />
+                                                </svg>
+                                            </span>
+                                            <div class="space-y-2 font-semibold">
+                                                <h3 class="text-xl text-purple-700 dark:text-white">Enterprise</h3>
+                                                <div class="text-sm text-purple-600"><span class="text-purple-400"></span>Up to 4 users</div>
+                                            </div>
+                                        </div>
+                                        <span class="text-22 font-extrabold text-purple-700 dark:text-white">₹499/ M</span>
+                                    </div>
+                                    <div class="py-6">
+                                        <ul class="space-y-5 dark:text-purple-600">
+                                            <li class="flex gap-3 text-purple-700 dark:text-white">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            opacity="0.4"
+                                                            d="M15.48 10.7702L11.69 15.8202H6.07999C5.11999 15.8202 4.63999 14.6602 5.31999 13.9802L10.5 8.80023C11.33 7.97023 12.68 7.97023 13.51 8.80023L15.48 10.7702Z"
+                                                            fill="#31D2AC"
+                                                        />
+                                                        <path
+                                                            d="M17.92 15.82H11.69L15.48 10.77L18.69 13.98C19.36 14.66 18.88 15.82 17.92 15.82Z"
+                                                            fill="#31D2AC"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                                <span>All Smart Plan benefits</span>
+                                            </li>
+                                            <li class="flex gap-3 text-purple-700 dark:text-white">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            opacity="0.4"
+                                                            d="M15.48 10.7702L11.69 15.8202H6.07999C5.11999 15.8202 4.63999 14.6602 5.31999 13.9802L10.5 8.80023C11.33 7.97023 12.68 7.97023 13.51 8.80023L15.48 10.7702Z"
+                                                            fill="#31D2AC"
+                                                        />
+                                                        <path
+                                                            d="M17.92 15.82H11.69L15.48 10.77L18.69 13.98C19.36 14.66 18.88 15.82 17.92 15.82Z"
+                                                            fill="#31D2AC"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                                <span>Shared access with 4 members</span>
+                                            </li>
+                                            <li class="flex gap-3 text-purple-700 dark:text-white">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            opacity="0.4"
+                                                            d="M15.48 10.7702L11.69 15.8202H6.07999C5.11999 15.8202 4.63999 14.6602 5.31999 13.9802L10.5 8.80023C11.33 7.97023 12.68 7.97023 13.51 8.80023L15.48 10.7702Z"
+                                                            fill="#31D2AC"
+                                                        />
+                                                        <path
+                                                            d="M17.92 15.82H11.69L15.48 10.77L18.69 13.98C19.36 14.66 18.88 15.82 17.92 15.82Z"
+                                                            fill="#31D2AC"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                                <span>Free home cleaning every 3rd month</span>
+                                            </li>
+                                            <li class="flex gap-3 text-purple-700 dark:text-white">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            opacity="0.4"
+                                                            d="M15.48 10.7702L11.69 15.8202H6.07999C5.11999 15.8202 4.63999 14.6602 5.31999 13.9802L10.5 8.80023C11.33 7.97023 12.68 7.97023 13.51 8.80023L15.48 10.7702Z"
+                                                            fill="#31D2AC"
+                                                        />
+                                                        <path
+                                                            d="M17.92 15.82H11.69L15.48 10.77L18.69 13.98C19.36 14.66 18.88 15.82 17.92 15.82Z"
+                                                            fill="#31D2AC"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                                <span>Dedicated relationship manager</span>
+                                            </li>
+                                            <li class="flex gap-3 text-purple-700 dark:text-white">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            opacity="0.4"
+                                                            d="M15.48 10.7702L11.69 15.8202H6.07999C5.11999 15.8202 4.63999 14.6602 5.31999 13.9802L10.5 8.80023C11.33 7.97023 12.68 7.97023 13.51 8.80023L15.48 10.7702Z"
+                                                            fill="#31D2AC"
+                                                        />
+                                                        <path
+                                                            d="M17.92 15.82H11.69L15.48 10.77L18.69 13.98C19.36 14.66 18.88 15.82 17.92 15.82Z"
+                                                            fill="#31D2AC"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                                <span>Exclusive combo packages & seasonal offers</span>
+                                            </li>
+                                            <li class="flex gap-3 text-purple-700 dark:text-white">
+                                                <span>
+                                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path
+                                                            opacity="0.4"
+                                                            d="M15.48 10.7702L11.69 15.8202H6.07999C5.11999 15.8202 4.63999 14.6602 5.31999 13.9802L10.5 8.80023C11.33 7.97023 12.68 7.97023 13.51 8.80023L15.48 10.7702Z"
+                                                            fill="#31D2AC"
+                                                        />
+                                                        <path
+                                                            d="M17.92 15.82H11.69L15.48 10.77L18.69 13.98C19.36 14.66 18.88 15.82 17.92 15.82Z"
+                                                            fill="#31D2AC"
+                                                        />
+                                                    </svg>
+                                                </span>
+                                                <span>15% off on every service</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="border-t border-purple-300 pt-6 dark:border-purple-700">
+                                    <a href="javascript:" class="btn block rounded-[10px] bg-purple-300 text-purple-700 hover:bg-secondary hover:text-white">
+                                        Choose your plan
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="overflow-x-hidden pb-16 lg:pb-36">
+                    <div class="relative mx-auto max-w-[1142px] grid-cols-3 gap-4 px-4 lg:grid">
+                        <img loading="lazy" src="assets/images/faq-bg-shape.svg" alt="Faq bg shape" class="absolute -left-60 top-0 lg:-left-96 lg:top-72" />
+                        <div class="mb-4 inline-block w-full text-center lg:mb-0 lg:pe-12 lg:ltr:text-left lg:rtl:text-right">
+                            <h2 class="mb-5 text-[26px]/7 font-bold text-purple-700 dark:text-white">FAQ ?</h2>
+                            <p class="text-xl">Have any questions? we are help you.</p>
+                            <a href="faq.html" class="group mt-8 inline-flex items-center gap-2.5 font-semibold text-primary lg:mt-10">
+                                <span>Learn more</span>
+                                <span
+                                    class="relative start-0 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-linear-to-r from-transparent from-50% to-primary/40 to-50% duration-300 group-hover:start-1 rtl:rotate-180"
+                                >
+                                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                        <path
+                                            d="M12.9 3.53991L10.06 0.689912C9.77 0.399912 9.29 0.399912 9 0.689912C8.71 0.979912 8.71 1.45991 9 1.74991L10.56 3.30991H0.989998C0.579998 3.30991 0.239998 3.64991 0.239998 4.05991C0.239998 4.46991 0.579998 4.80991 0.989998 4.80991H10.56L9 6.37991C8.71 6.66991 8.71 7.14991 9 7.43991C9.15 7.58991 9.34 7.65991 9.53 7.65991C9.72 7.65991 9.91 7.58991 10.06 7.43991L12.9 4.58991C13.2 4.29991 13.2 3.82991 12.9 3.53991Z"
+                                            fill="currentColor"
+                                        ></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-span-2 mt-10 lg:mt-0">
+                            <div class="accordion-container space-y-10!" itemscope itemtype="https://schema.org/FAQPage">
+                                <div
+                                    class="ac border-gray/20 mt-0! border-0! border-b-2! border-purple-300! bg-transparent! dark:border-purple-900!"
+                                    itemscope
+                                    itemprop="mainEntity"
+                                    itemtype="https://schema.org/Question"
+                                >
+                                    <h3 class="ac-header" itemprop="name">
+                                        <button
+                                            type="button"
+                                            class="ac-trigger flex! justify-between gap-4 p-0! pb-5! font-jakarta! text-lg! font-semibold! text-purple-700! outline-hidden after:hidden! ltr:text-left rtl:text-right dark:text-purple-300! md:text-xl!"
+                                        >
+                                            <span>Is there a free trial or demo service?</span>
+                                            <span
+                                                class="trigger-icon mt-1 grid h-[22px] w-[22px] shrink-0 place-content-center rounded-full border-2 border-purple-400 text-purple-400 transition duration-300"
+                                            >
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                    <path
+                                                        d="M6.09961 0.500977C6.65189 0.500977 7.09961 0.948692 7.09961 1.50098L7.09961 10.501C7.09961 11.0533 6.65189 11.501 6.09961 11.501H5.89961C5.34732 11.501 4.89961 11.0533 4.89961 10.501L4.89961 1.50098C4.89961 0.948692 5.34732 0.500977 5.89961 0.500977H6.09961Z"
+                                                        fill="currentColor"
+                                                    />
+                                                    <path
+                                                        d="M0.5 5.90039C0.5 5.34811 0.947715 4.90039 1.5 4.90039H10.5C11.0523 4.90039 11.5 5.34811 11.5 5.90039V6.10039C11.5 6.65268 11.0523 7.10039 10.5 7.10039H1.5C0.947715 7.10039 0.5 6.65268 0.5 6.10039V5.90039Z"
+                                                        fill="currentColor"
+                                                    />
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </h3>
+                                    <div class="ac-panel" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                        <p class="ac-text p-0! pb-5! font-jakarta! text-base! text-purple-500!" itemprop="text">
+                                            Yes! We offer a first-service discount or trial on select categories like home cleaning, salon, and pest control — so you can try us risk-free.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="ac border-gray/20 border-0! border-b-2! border-purple-300! bg-transparent! dark:border-purple-900!"
+                                    itemscope
+                                    itemprop="mainEntity"
+                                    itemtype="https://schema.org/Question"
+                                >
+                                    <h3 class="ac-header" itemprop="name">
+                                        <button
+                                            type="button"
+                                            class="ac-trigger flex! justify-between gap-4 p-0! pb-5! font-jakarta! text-lg! font-semibold! text-purple-700! outline-hidden after:hidden! ltr:text-left rtl:text-right dark:text-purple-300! md:text-xl!"
+                                        >
+                                            <span>How do I book a service?</span>
+                                            <span
+                                                class="trigger-icon mt-1 grid h-[22px] w-[22px] shrink-0 place-content-center rounded-full border-2 border-purple-400 text-purple-400 transition duration-300"
+                                            >
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                    <path
+                                                        d="M6.09961 0.500977C6.65189 0.500977 7.09961 0.948692 7.09961 1.50098L7.09961 10.501C7.09961 11.0533 6.65189 11.501 6.09961 11.501H5.89961C5.34732 11.501 4.89961 11.0533 4.89961 10.501L4.89961 1.50098C4.89961 0.948692 5.34732 0.500977 5.89961 0.500977H6.09961Z"
+                                                        fill="currentColor"
+                                                    />
+                                                    <path
+                                                        d="M0.5 5.90039C0.5 5.34811 0.947715 4.90039 1.5 4.90039H10.5C11.0523 4.90039 11.5 5.34811 11.5 5.90039V6.10039C11.5 6.65268 11.0523 7.10039 10.5 7.10039H1.5C0.947715 7.10039 0.5 6.65268 0.5 6.10039V5.90039Z"
+                                                        fill="currentColor"
+                                                    />
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </h3>
+                                    <div class="ac-panel" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                        <p class="ac-text p-0! pb-5! font-jakarta! text-base! text-purple-500!" itemprop="text">
+                                            Simply sign up, choose your service, select a time slot, and confirm your address. You’ll get instant confirmation and live updates.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="ac border-gray/20 border-0! border-b-2! border-purple-300! bg-transparent! dark:border-purple-900!"
+                                    itemscope
+                                    itemprop="mainEntity"
+                                    itemtype="https://schema.org/Question"
+                                >
+                                    <h3 class="ac-header" itemprop="name">
+                                        <button
+                                            type="button"
+                                            class="ac-trigger flex! justify-between gap-4 p-0! pb-5! font-jakarta! text-lg! font-semibold! text-purple-700! outline-hidden after:hidden! ltr:text-left rtl:text-right dark:text-purple-300! md:text-xl!"
+                                        >
+                                            <span>Are the service professionals verified?</span>
+                                            <span
+                                                class="trigger-icon mt-1 grid h-[22px] w-[22px] shrink-0 place-content-center rounded-full border-2 border-purple-400 text-purple-400 transition duration-300"
+                                            >
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                    <path
+                                                        d="M6.09961 0.500977C6.65189 0.500977 7.09961 0.948692 7.09961 1.50098L7.09961 10.501C7.09961 11.0533 6.65189 11.501 6.09961 11.501H5.89961C5.34732 11.501 4.89961 11.0533 4.89961 10.501L4.89961 1.50098C4.89961 0.948692 5.34732 0.500977 5.89961 0.500977H6.09961Z"
+                                                        fill="currentColor"
+                                                    />
+                                                    <path
+                                                        d="M0.5 5.90039C0.5 5.34811 0.947715 4.90039 1.5 4.90039H10.5C11.0523 4.90039 11.5 5.34811 11.5 5.90039V6.10039C11.5 6.65268 11.0523 7.10039 10.5 7.10039H1.5C0.947715 7.10039 0.5 6.65268 0.5 6.10039V5.90039Z"
+                                                        fill="currentColor"
+                                                    />
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </h3>
+                                    <div class="ac-panel" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                        <p class="ac-text p-0! pb-5! font-jakarta! text-base! text-purple-500!" itemprop="text">
+                                            Absolutely. All our professionals are background-checked, skill-tested, and trained to deliver 5-star service.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="ac border-gray/20 border-0! border-b-2! border-purple-300! bg-transparent! dark:border-purple-900!"
+                                    itemscope
+                                    itemprop="mainEntity"
+                                    itemtype="https://schema.org/Question"
+                                >
+                                    <h3 class="ac-header" itemprop="name">
+                                        <button
+                                            type="button"
+                                            class="ac-trigger flex! justify-between gap-4 p-0! pb-5! font-jakarta! text-lg! font-semibold! text-purple-700! outline-hidden after:hidden! ltr:text-left rtl:text-right dark:text-purple-300! md:text-xl!"
+                                        >
+                                            <span>What if I need to cancel or reschedule?</span>
+                                            <span
+                                                class="trigger-icon mt-1 grid h-[22px] w-[22px] shrink-0 place-content-center rounded-full border-2 border-purple-400 text-purple-400 transition duration-300"
+                                            >
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                    <path
+                                                        d="M6.09961 0.500977C6.65189 0.500977 7.09961 0.948692 7.09961 1.50098L7.09961 10.501C7.09961 11.0533 6.65189 11.501 6.09961 11.501H5.89961C5.34732 11.501 4.89961 11.0533 4.89961 10.501L4.89961 1.50098C4.89961 0.948692 5.34732 0.500977 5.89961 0.500977H6.09961Z"
+                                                        fill="currentColor"
+                                                    />
+                                                    <path
+                                                        d="M0.5 5.90039C0.5 5.34811 0.947715 4.90039 1.5 4.90039H10.5C11.0523 4.90039 11.5 5.34811 11.5 5.90039V6.10039C11.5 6.65268 11.0523 7.10039 10.5 7.10039H1.5C0.947715 7.10039 0.5 6.65268 0.5 6.10039V5.90039Z"
+                                                        fill="currentColor"
+                                                    />
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </h3>
+                                    <div class="ac-panel" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                        <p class="ac-text p-0! pb-5! font-jakarta! text-base! text-purple-500!" itemprop="text">
+                                            You can cancel or reschedule directly through the app or website — no extra charges if done within the allowed time window.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="ac border-gray/20 border-0! border-b-2! border-purple-300! bg-transparent! dark:border-purple-900!"
+                                    itemscope
+                                    itemprop="mainEntity"
+                                    itemtype="https://schema.org/Question"
+                                >
+                                    <h3 class="ac-header" itemprop="name">
+                                        <button
+                                            type="button"
+                                            class="ac-trigger flex! justify-between gap-4 p-0! pb-5! font-jakarta! text-lg! font-semibold! text-purple-700! outline-hidden after:hidden! ltr:text-left rtl:text-right dark:text-purple-300! md:text-xl!"
+                                        >
+                                            <span>How do I make payments?</span>
+                                            <span
+                                                class="trigger-icon mt-1 grid h-[22px] w-[22px] shrink-0 place-content-center rounded-full border-2 border-purple-400 text-purple-400 transition duration-300"
+                                            >
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                    <path
+                                                        d="M6.09961 0.500977C6.65189 0.500977 7.09961 0.948692 7.09961 1.50098L7.09961 10.501C7.09961 11.0533 6.65189 11.501 6.09961 11.501H5.89961C5.34732 11.501 4.89961 11.0533 4.89961 10.501L4.89961 1.50098C4.89961 0.948692 5.34732 0.500977 5.89961 0.500977H6.09961Z"
+                                                        fill="currentColor"
+                                                    />
+                                                    <path
+                                                        d="M0.5 5.90039C0.5 5.34811 0.947715 4.90039 1.5 4.90039H10.5C11.0523 4.90039 11.5 5.34811 11.5 5.90039V6.10039C11.5 6.65268 11.0523 7.10039 10.5 7.10039H1.5C0.947715 7.10039 0.5 6.65268 0.5 6.10039V5.90039Z"
+                                                        fill="currentColor"
+                                                    />
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </h3>
+                                    <div class="ac-panel" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                        <p class="ac-text p-0! pb-5! font-jakarta! text-base! text-purple-500!" itemprop="text">
+                                            We support UPI, debit/credit cards, net banking, and wallet payments. All transactions are 100% secure.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="ac border-gray/20 border-0! border-b-2! border-purple-300! bg-transparent! dark:border-purple-900!"
+                                    itemscope
+                                    itemprop="mainEntity"
+                                    itemtype="https://schema.org/Question"
+                                >
+                                    <h3 class="ac-header" itemprop="name">
+                                        <button
+                                            type="button"
+                                            class="ac-trigger flex! justify-between gap-4 p-0! pb-5! font-jakarta! text-lg! font-semibold! text-purple-700! outline-hidden after:hidden! ltr:text-left rtl:text-right dark:text-purple-300! md:text-xl!"
+                                        >
+                                            <span>Do you offer support during the service?</span>
+                                            <span
+                                                class="trigger-icon mt-1 grid h-[22px] w-[22px] shrink-0 place-content-center rounded-full border-2 border-purple-400 text-purple-400 transition duration-300"
+                                            >
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                    <path
+                                                        d="M6.09961 0.500977C6.65189 0.500977 7.09961 0.948692 7.09961 1.50098L7.09961 10.501C7.09961 11.0533 6.65189 11.501 6.09961 11.501H5.89961C5.34732 11.501 4.89961 11.0533 4.89961 10.501L4.89961 1.50098C4.89961 0.948692 5.34732 0.500977 5.89961 0.500977H6.09961Z"
+                                                        fill="currentColor"
+                                                    />
+                                                    <path
+                                                        d="M0.5 5.90039C0.5 5.34811 0.947715 4.90039 1.5 4.90039H10.5C11.0523 4.90039 11.5 5.34811 11.5 5.90039V6.10039C11.5 6.65268 11.0523 7.10039 10.5 7.10039H1.5C0.947715 7.10039 0.5 6.65268 0.5 6.10039V5.90039Z"
+                                                        fill="currentColor"
+                                                    />
+                                                </svg>
+                                            </span>
+                                        </button>
+                                    </h3>
+                                    <div class="ac-panel" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                        <p class="ac-text p-0! pb-5! font-jakarta! text-base! text-purple-500!" itemprop="text">
+                                            Yes! Our real-time chat and call support is available before, during, and after the service — so you’re always covered.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pb-16 lg:pb-28">
+                    <div class="mx-auto max-w-[1142px] px-4">
+                        <div class="mx-auto pb-6 text-center lg:w-2/3">
+                            <h2 class="mb-5 text-[26px]/7 font-bold text-purple-700 dark:text-white">Testimonial</h2>
+                            <p class="text-lg md:text-xl">Don’t take our word for it — take theirs!</p>
+                        </div>
+
+                        <div class="swiper testimonial-thumb mx-auto max-w-3xl">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="mx-auto h-20 w-20 overflow-hidden rounded-full grayscale">
+                                        <img loading="lazy" src="assets/images/testimonial-user-1.svg" alt="Testimonial image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mx-auto h-20 w-20 overflow-hidden rounded-full grayscale">
+                                        <img loading="lazy" src="assets/images/testimonial-user-2.svg" alt="Testimonial image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mx-auto h-20 w-20 overflow-hidden rounded-full grayscale">
+                                        <img loading="lazy" src="assets/images/testimonial-user-3.svg" alt="Testimonial image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mx-auto h-20 w-20 overflow-hidden rounded-full grayscale">
+                                        <img loading="lazy" src="assets/images/testimonial-user-4.svg" alt="Testimonial image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mx-auto h-20 w-20 overflow-hidden rounded-full grayscale">
+                                        <img loading="lazy" src="assets/images/testimonial-user-5.svg" alt="Testimonial image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mx-auto h-20 w-20 overflow-hidden rounded-full grayscale">
+                                        <img loading="lazy" src="assets/images/testimonial-user-6.svg" alt="Testimonial image" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="mx-auto h-20 w-20 overflow-hidden rounded-full grayscale">
+                                        <img loading="lazy" src="assets/images/testimonial-user-7.svg" alt="Testimonial image" />
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="relative mt-4 md:mt-10">
+                            <div class="swiper testimonial mx-auto w-full max-w-xl text-center">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="inline-block">
+                                            <svg width="118" height="22" viewBox="0 0 118 22" fill="none">
+                                                <path
+                                                    d="M106.143 1.42372C106.532 0.777901 107.468 0.777901 107.857 1.42372L110.402 5.65347C110.542 5.88548 110.77 6.05095 111.033 6.11204L115.843 7.22589C116.577 7.39596 116.866 8.28643 116.372 8.85564L113.136 12.5836C112.959 12.7881 112.872 13.0558 112.895 13.3256L113.322 18.2438C113.387 18.9947 112.63 19.545 111.936 19.251L107.39 17.3253C107.141 17.2196 106.859 17.2196 106.61 17.3253L102.064 19.251C101.37 19.545 100.613 18.9947 100.678 18.2438L101.105 13.3256C101.128 13.0558 101.041 12.7881 100.864 12.5836L97.6276 8.85564C97.1335 8.28643 97.4229 7.39596 98.1572 7.22589L102.967 6.11204C103.23 6.05095 103.458 5.88548 103.598 5.65347L106.143 1.42372Z"
+                                                    fill="#E8E7EB"
+                                                />
+                                                <path
+                                                    d="M82.1432 1.42372C82.5319 0.777901 83.4681 0.777901 83.8568 1.42372L86.4023 5.65347C86.5419 5.88548 86.7697 6.05095 87.0335 6.11204L91.8428 7.22589C92.5771 7.39596 92.8665 8.28643 92.3724 8.85564L89.1362 12.5836C88.9587 12.7881 88.8717 13.0558 88.8951 13.3256L89.322 18.2438C89.3871 18.9947 88.6297 19.545 87.9356 19.251L83.3901 17.3253C83.1408 17.2196 82.8592 17.2196 82.6099 17.3253L78.0644 19.251C77.3703 19.545 76.6129 18.9947 76.678 18.2438L77.1049 13.3256C77.1283 13.0558 77.0413 12.7881 76.8638 12.5836L73.6276 8.85564C73.1335 8.28643 73.4229 7.39596 74.1572 7.22589L78.9665 6.11204C79.2303 6.05095 79.4581 5.88548 79.5977 5.65347L82.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M58.1432 1.42372C58.5319 0.777901 59.4681 0.777901 59.8568 1.42372L62.4023 5.65347C62.5419 5.88548 62.7697 6.05095 63.0335 6.11204L67.8428 7.22589C68.5771 7.39596 68.8665 8.28643 68.3724 8.85564L65.1362 12.5836C64.9587 12.7881 64.8717 13.0558 64.8951 13.3256L65.322 18.2438C65.3871 18.9947 64.6297 19.545 63.9356 19.251L59.3901 17.3253C59.1408 17.2196 58.8592 17.2196 58.6099 17.3253L54.0644 19.251C53.3703 19.545 52.6129 18.9947 52.678 18.2438L53.1049 13.3256C53.1283 13.0558 53.0413 12.7881 52.8638 12.5836L49.6276 8.85564C49.1335 8.28643 49.4229 7.39596 50.1572 7.22589L54.9665 6.11204C55.2303 6.05095 55.4581 5.88548 55.5977 5.65347L58.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M34.1432 1.42372C34.5319 0.777901 35.4681 0.777901 35.8568 1.42372L38.4023 5.65347C38.5419 5.88548 38.7697 6.05095 39.0335 6.11204L43.8428 7.22589C44.5771 7.39596 44.8665 8.28643 44.3724 8.85564L41.1362 12.5836C40.9587 12.7881 40.8717 13.0558 40.8951 13.3256L41.322 18.2438C41.3871 18.9947 40.6297 19.545 39.9356 19.251L35.3901 17.3253C35.1408 17.2196 34.8592 17.2196 34.6099 17.3253L30.0644 19.251C29.3703 19.545 28.6129 18.9947 28.678 18.2438L29.1049 13.3256C29.1283 13.0558 29.0413 12.7881 28.8638 12.5836L25.6276 8.85564C25.1335 8.28643 25.4229 7.39596 26.1572 7.22589L30.9665 6.11204C31.2303 6.05095 31.4581 5.88548 31.5977 5.65347L34.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M10.1432 1.42372C10.5319 0.777901 11.4681 0.777901 11.8568 1.42372L14.4023 5.65347C14.5419 5.88548 14.7697 6.05095 15.0335 6.11204L19.8428 7.22589C20.5771 7.39596 20.8665 8.28643 20.3723 8.85564L17.1362 12.5836C16.9587 12.7881 16.8717 13.0558 16.8951 13.3256L17.322 18.2438C17.3871 18.9947 16.6297 19.545 15.9356 19.251L11.3901 17.3253C11.1408 17.2196 10.8592 17.2196 10.6099 17.3253L6.06438 19.251C5.37034 19.545 4.61286 18.9947 4.67803 18.2438L5.10486 13.3256C5.12827 13.0558 5.04128 12.7881 4.86377 12.5836L1.62765 8.85564C1.13354 8.28643 1.42287 7.39596 2.15719 7.22589L6.96651 6.11204C7.23032 6.05095 7.45807 5.88548 7.59769 5.65347L10.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="mt-4 text-base font-medium">
+                                            "I booked a full home deep cleaning before Diwali. The team arrived right on time, and my house looked sparkling clean. No hassle, no rescheduling — just wow!"
+                                        </p>
+                                        <div class="mt-10">
+                                            <h3 class="mb-1 text-base font-semibold text-purple-700 dark:text-purple-300">Rohan Mehra</h3>
+                                            <span class="text-xs font-medium italic">📍Delhi | Home Cleaning (5/5)</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="inline-block">
+                                            <svg width="118" height="22" viewBox="0 0 118 22" fill="none">
+                                                <path
+                                                    d="M106.143 1.42372C106.532 0.777901 107.468 0.777901 107.857 1.42372L110.402 5.65347C110.542 5.88548 110.77 6.05095 111.033 6.11204L115.843 7.22589C116.577 7.39596 116.866 8.28643 116.372 8.85564L113.136 12.5836C112.959 12.7881 112.872 13.0558 112.895 13.3256L113.322 18.2438C113.387 18.9947 112.63 19.545 111.936 19.251L107.39 17.3253C107.141 17.2196 106.859 17.2196 106.61 17.3253L102.064 19.251C101.37 19.545 100.613 18.9947 100.678 18.2438L101.105 13.3256C101.128 13.0558 101.041 12.7881 100.864 12.5836L97.6276 8.85564C97.1335 8.28643 97.4229 7.39596 98.1572 7.22589L102.967 6.11204C103.23 6.05095 103.458 5.88548 103.598 5.65347L106.143 1.42372Z"
+                                                    fill="#E8E7EB"
+                                                />
+                                                <path
+                                                    d="M82.1432 1.42372C82.5319 0.777901 83.4681 0.777901 83.8568 1.42372L86.4023 5.65347C86.5419 5.88548 86.7697 6.05095 87.0335 6.11204L91.8428 7.22589C92.5771 7.39596 92.8665 8.28643 92.3724 8.85564L89.1362 12.5836C88.9587 12.7881 88.8717 13.0558 88.8951 13.3256L89.322 18.2438C89.3871 18.9947 88.6297 19.545 87.9356 19.251L83.3901 17.3253C83.1408 17.2196 82.8592 17.2196 82.6099 17.3253L78.0644 19.251C77.3703 19.545 76.6129 18.9947 76.678 18.2438L77.1049 13.3256C77.1283 13.0558 77.0413 12.7881 76.8638 12.5836L73.6276 8.85564C73.1335 8.28643 73.4229 7.39596 74.1572 7.22589L78.9665 6.11204C79.2303 6.05095 79.4581 5.88548 79.5977 5.65347L82.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M58.1432 1.42372C58.5319 0.777901 59.4681 0.777901 59.8568 1.42372L62.4023 5.65347C62.5419 5.88548 62.7697 6.05095 63.0335 6.11204L67.8428 7.22589C68.5771 7.39596 68.8665 8.28643 68.3724 8.85564L65.1362 12.5836C64.9587 12.7881 64.8717 13.0558 64.8951 13.3256L65.322 18.2438C65.3871 18.9947 64.6297 19.545 63.9356 19.251L59.3901 17.3253C59.1408 17.2196 58.8592 17.2196 58.6099 17.3253L54.0644 19.251C53.3703 19.545 52.6129 18.9947 52.678 18.2438L53.1049 13.3256C53.1283 13.0558 53.0413 12.7881 52.8638 12.5836L49.6276 8.85564C49.1335 8.28643 49.4229 7.39596 50.1572 7.22589L54.9665 6.11204C55.2303 6.05095 55.4581 5.88548 55.5977 5.65347L58.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M34.1432 1.42372C34.5319 0.777901 35.4681 0.777901 35.8568 1.42372L38.4023 5.65347C38.5419 5.88548 38.7697 6.05095 39.0335 6.11204L43.8428 7.22589C44.5771 7.39596 44.8665 8.28643 44.3724 8.85564L41.1362 12.5836C40.9587 12.7881 40.8717 13.0558 40.8951 13.3256L41.322 18.2438C41.3871 18.9947 40.6297 19.545 39.9356 19.251L35.3901 17.3253C35.1408 17.2196 34.8592 17.2196 34.6099 17.3253L30.0644 19.251C29.3703 19.545 28.6129 18.9947 28.678 18.2438L29.1049 13.3256C29.1283 13.0558 29.0413 12.7881 28.8638 12.5836L25.6276 8.85564C25.1335 8.28643 25.4229 7.39596 26.1572 7.22589L30.9665 6.11204C31.2303 6.05095 31.4581 5.88548 31.5977 5.65347L34.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M10.1432 1.42372C10.5319 0.777901 11.4681 0.777901 11.8568 1.42372L14.4023 5.65347C14.5419 5.88548 14.7697 6.05095 15.0335 6.11204L19.8428 7.22589C20.5771 7.39596 20.8665 8.28643 20.3723 8.85564L17.1362 12.5836C16.9587 12.7881 16.8717 13.0558 16.8951 13.3256L17.322 18.2438C17.3871 18.9947 16.6297 19.545 15.9356 19.251L11.3901 17.3253C11.1408 17.2196 10.8592 17.2196 10.6099 17.3253L6.06438 19.251C5.37034 19.545 4.61286 18.9947 4.67803 18.2438L5.10486 13.3256C5.12827 13.0558 5.04128 12.7881 4.86377 12.5836L1.62765 8.85564C1.13354 8.28643 1.42287 7.39596 2.15719 7.22589L6.96651 6.11204C7.23032 6.05095 7.45807 5.88548 7.59769 5.65347L10.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="mt-4 text-base font-medium">
+                                            "My AC stopped working mid-summer. Within 30 minutes of booking, the technician was at my doorstep. Clean job and reasonable pricing. Highly recommend!"
+                                        </p>
+                                        <div class="mt-10">
+                                            <h3 class="mb-1 text-base font-semibold text-purple-700 dark:text-purple-300">Rahul Sen</h3>
+                                            <span class="text-xs font-medium italic">📍 Bengaluru | AC Repair (4.5/5)</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="inline-block">
+                                            <svg width="118" height="22" viewBox="0 0 118 22" fill="none">
+                                                <path
+                                                    d="M106.143 1.42372C106.532 0.777901 107.468 0.777901 107.857 1.42372L110.402 5.65347C110.542 5.88548 110.77 6.05095 111.033 6.11204L115.843 7.22589C116.577 7.39596 116.866 8.28643 116.372 8.85564L113.136 12.5836C112.959 12.7881 112.872 13.0558 112.895 13.3256L113.322 18.2438C113.387 18.9947 112.63 19.545 111.936 19.251L107.39 17.3253C107.141 17.2196 106.859 17.2196 106.61 17.3253L102.064 19.251C101.37 19.545 100.613 18.9947 100.678 18.2438L101.105 13.3256C101.128 13.0558 101.041 12.7881 100.864 12.5836L97.6276 8.85564C97.1335 8.28643 97.4229 7.39596 98.1572 7.22589L102.967 6.11204C103.23 6.05095 103.458 5.88548 103.598 5.65347L106.143 1.42372Z"
+                                                    fill="#E8E7EB"
+                                                />
+                                                <path
+                                                    d="M82.1432 1.42372C82.5319 0.777901 83.4681 0.777901 83.8568 1.42372L86.4023 5.65347C86.5419 5.88548 86.7697 6.05095 87.0335 6.11204L91.8428 7.22589C92.5771 7.39596 92.8665 8.28643 92.3724 8.85564L89.1362 12.5836C88.9587 12.7881 88.8717 13.0558 88.8951 13.3256L89.322 18.2438C89.3871 18.9947 88.6297 19.545 87.9356 19.251L83.3901 17.3253C83.1408 17.2196 82.8592 17.2196 82.6099 17.3253L78.0644 19.251C77.3703 19.545 76.6129 18.9947 76.678 18.2438L77.1049 13.3256C77.1283 13.0558 77.0413 12.7881 76.8638 12.5836L73.6276 8.85564C73.1335 8.28643 73.4229 7.39596 74.1572 7.22589L78.9665 6.11204C79.2303 6.05095 79.4581 5.88548 79.5977 5.65347L82.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M58.1432 1.42372C58.5319 0.777901 59.4681 0.777901 59.8568 1.42372L62.4023 5.65347C62.5419 5.88548 62.7697 6.05095 63.0335 6.11204L67.8428 7.22589C68.5771 7.39596 68.8665 8.28643 68.3724 8.85564L65.1362 12.5836C64.9587 12.7881 64.8717 13.0558 64.8951 13.3256L65.322 18.2438C65.3871 18.9947 64.6297 19.545 63.9356 19.251L59.3901 17.3253C59.1408 17.2196 58.8592 17.2196 58.6099 17.3253L54.0644 19.251C53.3703 19.545 52.6129 18.9947 52.678 18.2438L53.1049 13.3256C53.1283 13.0558 53.0413 12.7881 52.8638 12.5836L49.6276 8.85564C49.1335 8.28643 49.4229 7.39596 50.1572 7.22589L54.9665 6.11204C55.2303 6.05095 55.4581 5.88548 55.5977 5.65347L58.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M34.1432 1.42372C34.5319 0.777901 35.4681 0.777901 35.8568 1.42372L38.4023 5.65347C38.5419 5.88548 38.7697 6.05095 39.0335 6.11204L43.8428 7.22589C44.5771 7.39596 44.8665 8.28643 44.3724 8.85564L41.1362 12.5836C40.9587 12.7881 40.8717 13.0558 40.8951 13.3256L41.322 18.2438C41.3871 18.9947 40.6297 19.545 39.9356 19.251L35.3901 17.3253C35.1408 17.2196 34.8592 17.2196 34.6099 17.3253L30.0644 19.251C29.3703 19.545 28.6129 18.9947 28.678 18.2438L29.1049 13.3256C29.1283 13.0558 29.0413 12.7881 28.8638 12.5836L25.6276 8.85564C25.1335 8.28643 25.4229 7.39596 26.1572 7.22589L30.9665 6.11204C31.2303 6.05095 31.4581 5.88548 31.5977 5.65347L34.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M10.1432 1.42372C10.5319 0.777901 11.4681 0.777901 11.8568 1.42372L14.4023 5.65347C14.5419 5.88548 14.7697 6.05095 15.0335 6.11204L19.8428 7.22589C20.5771 7.39596 20.8665 8.28643 20.3723 8.85564L17.1362 12.5836C16.9587 12.7881 16.8717 13.0558 16.8951 13.3256L17.322 18.2438C17.3871 18.9947 16.6297 19.545 15.9356 19.251L11.3901 17.3253C11.1408 17.2196 10.8592 17.2196 10.6099 17.3253L6.06438 19.251C5.37034 19.545 4.61286 18.9947 4.67803 18.2438L5.10486 13.3256C5.12827 13.0558 5.04128 12.7881 4.86377 12.5836L1.62765 8.85564C1.13354 8.28643 1.42287 7.39596 2.15719 7.22589L6.96651 6.11204C7.23032 6.05095 7.45807 5.88548 7.59769 5.65347L10.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="mt-4 text-base font-medium">
+                                            "Loved the convenience! I booked a facial and waxing service and it was just like a luxury spa experience — but at home. Polite, professional, and punctual."
+                                        </p>
+                                        <div class="mt-10">
+                                            <h3 class="mb-1 text-base font-semibold text-purple-700 dark:text-purple-300">Pooja Sharma</h3>
+                                            <span class="text-xs font-medium italic">📍Mumbai | Salon at Home (5/5)</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="inline-block">
+                                            <svg width="118" height="22" viewBox="0 0 118 22" fill="none">
+                                                <path
+                                                    d="M106.143 1.42372C106.532 0.777901 107.468 0.777901 107.857 1.42372L110.402 5.65347C110.542 5.88548 110.77 6.05095 111.033 6.11204L115.843 7.22589C116.577 7.39596 116.866 8.28643 116.372 8.85564L113.136 12.5836C112.959 12.7881 112.872 13.0558 112.895 13.3256L113.322 18.2438C113.387 18.9947 112.63 19.545 111.936 19.251L107.39 17.3253C107.141 17.2196 106.859 17.2196 106.61 17.3253L102.064 19.251C101.37 19.545 100.613 18.9947 100.678 18.2438L101.105 13.3256C101.128 13.0558 101.041 12.7881 100.864 12.5836L97.6276 8.85564C97.1335 8.28643 97.4229 7.39596 98.1572 7.22589L102.967 6.11204C103.23 6.05095 103.458 5.88548 103.598 5.65347L106.143 1.42372Z"
+                                                    fill="#E8E7EB"
+                                                />
+                                                <path
+                                                    d="M82.1432 1.42372C82.5319 0.777901 83.4681 0.777901 83.8568 1.42372L86.4023 5.65347C86.5419 5.88548 86.7697 6.05095 87.0335 6.11204L91.8428 7.22589C92.5771 7.39596 92.8665 8.28643 92.3724 8.85564L89.1362 12.5836C88.9587 12.7881 88.8717 13.0558 88.8951 13.3256L89.322 18.2438C89.3871 18.9947 88.6297 19.545 87.9356 19.251L83.3901 17.3253C83.1408 17.2196 82.8592 17.2196 82.6099 17.3253L78.0644 19.251C77.3703 19.545 76.6129 18.9947 76.678 18.2438L77.1049 13.3256C77.1283 13.0558 77.0413 12.7881 76.8638 12.5836L73.6276 8.85564C73.1335 8.28643 73.4229 7.39596 74.1572 7.22589L78.9665 6.11204C79.2303 6.05095 79.4581 5.88548 79.5977 5.65347L82.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M58.1432 1.42372C58.5319 0.777901 59.4681 0.777901 59.8568 1.42372L62.4023 5.65347C62.5419 5.88548 62.7697 6.05095 63.0335 6.11204L67.8428 7.22589C68.5771 7.39596 68.8665 8.28643 68.3724 8.85564L65.1362 12.5836C64.9587 12.7881 64.8717 13.0558 64.8951 13.3256L65.322 18.2438C65.3871 18.9947 64.6297 19.545 63.9356 19.251L59.3901 17.3253C59.1408 17.2196 58.8592 17.2196 58.6099 17.3253L54.0644 19.251C53.3703 19.545 52.6129 18.9947 52.678 18.2438L53.1049 13.3256C53.1283 13.0558 53.0413 12.7881 52.8638 12.5836L49.6276 8.85564C49.1335 8.28643 49.4229 7.39596 50.1572 7.22589L54.9665 6.11204C55.2303 6.05095 55.4581 5.88548 55.5977 5.65347L58.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M34.1432 1.42372C34.5319 0.777901 35.4681 0.777901 35.8568 1.42372L38.4023 5.65347C38.5419 5.88548 38.7697 6.05095 39.0335 6.11204L43.8428 7.22589C44.5771 7.39596 44.8665 8.28643 44.3724 8.85564L41.1362 12.5836C40.9587 12.7881 40.8717 13.0558 40.8951 13.3256L41.322 18.2438C41.3871 18.9947 40.6297 19.545 39.9356 19.251L35.3901 17.3253C35.1408 17.2196 34.8592 17.2196 34.6099 17.3253L30.0644 19.251C29.3703 19.545 28.6129 18.9947 28.678 18.2438L29.1049 13.3256C29.1283 13.0558 29.0413 12.7881 28.8638 12.5836L25.6276 8.85564C25.1335 8.28643 25.4229 7.39596 26.1572 7.22589L30.9665 6.11204C31.2303 6.05095 31.4581 5.88548 31.5977 5.65347L34.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M10.1432 1.42372C10.5319 0.777901 11.4681 0.777901 11.8568 1.42372L14.4023 5.65347C14.5419 5.88548 14.7697 6.05095 15.0335 6.11204L19.8428 7.22589C20.5771 7.39596 20.8665 8.28643 20.3723 8.85564L17.1362 12.5836C16.9587 12.7881 16.8717 13.0558 16.8951 13.3256L17.322 18.2438C17.3871 18.9947 16.6297 19.545 15.9356 19.251L11.3901 17.3253C11.1408 17.2196 10.8592 17.2196 10.6099 17.3253L6.06438 19.251C5.37034 19.545 4.61286 18.9947 4.67803 18.2438L5.10486 13.3256C5.12827 13.0558 5.04128 12.7881 4.86377 12.5836L1.62765 8.85564C1.13354 8.28643 1.42287 7.39596 2.15719 7.22589L6.96651 6.11204C7.23032 6.05095 7.45807 5.88548 7.59769 5.65347L10.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="mt-4 text-base font-medium">
+                                            "The electrician came on time, fixed all my switchboard issues, and even explained how to avoid overload. Great service quality and fair rates."
+                                        </p>
+                                        <div class="mt-10">
+                                            <h3 class="mb-1 text-base font-semibold text-purple-700 dark:text-purple-300">Arunita Bhatia</h3>
+                                            <span class="text-xs font-medium italic">📍 Hyderabad | Electrician (4/5)</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="inline-block">
+                                            <svg width="118" height="22" viewBox="0 0 118 22" fill="none">
+                                                <path
+                                                    d="M106.143 1.42372C106.532 0.777901 107.468 0.777901 107.857 1.42372L110.402 5.65347C110.542 5.88548 110.77 6.05095 111.033 6.11204L115.843 7.22589C116.577 7.39596 116.866 8.28643 116.372 8.85564L113.136 12.5836C112.959 12.7881 112.872 13.0558 112.895 13.3256L113.322 18.2438C113.387 18.9947 112.63 19.545 111.936 19.251L107.39 17.3253C107.141 17.2196 106.859 17.2196 106.61 17.3253L102.064 19.251C101.37 19.545 100.613 18.9947 100.678 18.2438L101.105 13.3256C101.128 13.0558 101.041 12.7881 100.864 12.5836L97.6276 8.85564C97.1335 8.28643 97.4229 7.39596 98.1572 7.22589L102.967 6.11204C103.23 6.05095 103.458 5.88548 103.598 5.65347L106.143 1.42372Z"
+                                                    fill="#E8E7EB"
+                                                />
+                                                <path
+                                                    d="M82.1432 1.42372C82.5319 0.777901 83.4681 0.777901 83.8568 1.42372L86.4023 5.65347C86.5419 5.88548 86.7697 6.05095 87.0335 6.11204L91.8428 7.22589C92.5771 7.39596 92.8665 8.28643 92.3724 8.85564L89.1362 12.5836C88.9587 12.7881 88.8717 13.0558 88.8951 13.3256L89.322 18.2438C89.3871 18.9947 88.6297 19.545 87.9356 19.251L83.3901 17.3253C83.1408 17.2196 82.8592 17.2196 82.6099 17.3253L78.0644 19.251C77.3703 19.545 76.6129 18.9947 76.678 18.2438L77.1049 13.3256C77.1283 13.0558 77.0413 12.7881 76.8638 12.5836L73.6276 8.85564C73.1335 8.28643 73.4229 7.39596 74.1572 7.22589L78.9665 6.11204C79.2303 6.05095 79.4581 5.88548 79.5977 5.65347L82.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M58.1432 1.42372C58.5319 0.777901 59.4681 0.777901 59.8568 1.42372L62.4023 5.65347C62.5419 5.88548 62.7697 6.05095 63.0335 6.11204L67.8428 7.22589C68.5771 7.39596 68.8665 8.28643 68.3724 8.85564L65.1362 12.5836C64.9587 12.7881 64.8717 13.0558 64.8951 13.3256L65.322 18.2438C65.3871 18.9947 64.6297 19.545 63.9356 19.251L59.3901 17.3253C59.1408 17.2196 58.8592 17.2196 58.6099 17.3253L54.0644 19.251C53.3703 19.545 52.6129 18.9947 52.678 18.2438L53.1049 13.3256C53.1283 13.0558 53.0413 12.7881 52.8638 12.5836L49.6276 8.85564C49.1335 8.28643 49.4229 7.39596 50.1572 7.22589L54.9665 6.11204C55.2303 6.05095 55.4581 5.88548 55.5977 5.65347L58.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M34.1432 1.42372C34.5319 0.777901 35.4681 0.777901 35.8568 1.42372L38.4023 5.65347C38.5419 5.88548 38.7697 6.05095 39.0335 6.11204L43.8428 7.22589C44.5771 7.39596 44.8665 8.28643 44.3724 8.85564L41.1362 12.5836C40.9587 12.7881 40.8717 13.0558 40.8951 13.3256L41.322 18.2438C41.3871 18.9947 40.6297 19.545 39.9356 19.251L35.3901 17.3253C35.1408 17.2196 34.8592 17.2196 34.6099 17.3253L30.0644 19.251C29.3703 19.545 28.6129 18.9947 28.678 18.2438L29.1049 13.3256C29.1283 13.0558 29.0413 12.7881 28.8638 12.5836L25.6276 8.85564C25.1335 8.28643 25.4229 7.39596 26.1572 7.22589L30.9665 6.11204C31.2303 6.05095 31.4581 5.88548 31.5977 5.65347L34.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M10.1432 1.42372C10.5319 0.777901 11.4681 0.777901 11.8568 1.42372L14.4023 5.65347C14.5419 5.88548 14.7697 6.05095 15.0335 6.11204L19.8428 7.22589C20.5771 7.39596 20.8665 8.28643 20.3723 8.85564L17.1362 12.5836C16.9587 12.7881 16.8717 13.0558 16.8951 13.3256L17.322 18.2438C17.3871 18.9947 16.6297 19.545 15.9356 19.251L11.3901 17.3253C11.1408 17.2196 10.8592 17.2196 10.6099 17.3253L6.06438 19.251C5.37034 19.545 4.61286 18.9947 4.67803 18.2438L5.10486 13.3256C5.12827 13.0558 5.04128 12.7881 4.86377 12.5836L1.62765 8.85564C1.13354 8.28643 1.42287 7.39596 2.15719 7.22589L6.96651 6.11204C7.23032 6.05095 7.45807 5.88548 7.59769 5.65347L10.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="mt-4 text-base font-medium">
+                                            "They handled a major cockroach problem in our kitchen with eco-safe chemicals. Booking was super smooth and I got a follow-up reminder after 2 weeks!"
+                                        </p>
+                                        <div class="mt-10">
+                                            <h3 class="mb-1 text-base font-semibold text-purple-700 dark:text-purple-300">Shoyaib Rizvi</h3>
+                                            <span class="text-xs font-medium italic">📍 Pune | Pest Control (4.5/5)</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="inline-block">
+                                            <svg width="118" height="22" viewBox="0 0 118 22" fill="none">
+                                                <path
+                                                    d="M106.143 1.42372C106.532 0.777901 107.468 0.777901 107.857 1.42372L110.402 5.65347C110.542 5.88548 110.77 6.05095 111.033 6.11204L115.843 7.22589C116.577 7.39596 116.866 8.28643 116.372 8.85564L113.136 12.5836C112.959 12.7881 112.872 13.0558 112.895 13.3256L113.322 18.2438C113.387 18.9947 112.63 19.545 111.936 19.251L107.39 17.3253C107.141 17.2196 106.859 17.2196 106.61 17.3253L102.064 19.251C101.37 19.545 100.613 18.9947 100.678 18.2438L101.105 13.3256C101.128 13.0558 101.041 12.7881 100.864 12.5836L97.6276 8.85564C97.1335 8.28643 97.4229 7.39596 98.1572 7.22589L102.967 6.11204C103.23 6.05095 103.458 5.88548 103.598 5.65347L106.143 1.42372Z"
+                                                    fill="#E8E7EB"
+                                                />
+                                                <path
+                                                    d="M82.1432 1.42372C82.5319 0.777901 83.4681 0.777901 83.8568 1.42372L86.4023 5.65347C86.5419 5.88548 86.7697 6.05095 87.0335 6.11204L91.8428 7.22589C92.5771 7.39596 92.8665 8.28643 92.3724 8.85564L89.1362 12.5836C88.9587 12.7881 88.8717 13.0558 88.8951 13.3256L89.322 18.2438C89.3871 18.9947 88.6297 19.545 87.9356 19.251L83.3901 17.3253C83.1408 17.2196 82.8592 17.2196 82.6099 17.3253L78.0644 19.251C77.3703 19.545 76.6129 18.9947 76.678 18.2438L77.1049 13.3256C77.1283 13.0558 77.0413 12.7881 76.8638 12.5836L73.6276 8.85564C73.1335 8.28643 73.4229 7.39596 74.1572 7.22589L78.9665 6.11204C79.2303 6.05095 79.4581 5.88548 79.5977 5.65347L82.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M58.1432 1.42372C58.5319 0.777901 59.4681 0.777901 59.8568 1.42372L62.4023 5.65347C62.5419 5.88548 62.7697 6.05095 63.0335 6.11204L67.8428 7.22589C68.5771 7.39596 68.8665 8.28643 68.3724 8.85564L65.1362 12.5836C64.9587 12.7881 64.8717 13.0558 64.8951 13.3256L65.322 18.2438C65.3871 18.9947 64.6297 19.545 63.9356 19.251L59.3901 17.3253C59.1408 17.2196 58.8592 17.2196 58.6099 17.3253L54.0644 19.251C53.3703 19.545 52.6129 18.9947 52.678 18.2438L53.1049 13.3256C53.1283 13.0558 53.0413 12.7881 52.8638 12.5836L49.6276 8.85564C49.1335 8.28643 49.4229 7.39596 50.1572 7.22589L54.9665 6.11204C55.2303 6.05095 55.4581 5.88548 55.5977 5.65347L58.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M34.1432 1.42372C34.5319 0.777901 35.4681 0.777901 35.8568 1.42372L38.4023 5.65347C38.5419 5.88548 38.7697 6.05095 39.0335 6.11204L43.8428 7.22589C44.5771 7.39596 44.8665 8.28643 44.3724 8.85564L41.1362 12.5836C40.9587 12.7881 40.8717 13.0558 40.8951 13.3256L41.322 18.2438C41.3871 18.9947 40.6297 19.545 39.9356 19.251L35.3901 17.3253C35.1408 17.2196 34.8592 17.2196 34.6099 17.3253L30.0644 19.251C29.3703 19.545 28.6129 18.9947 28.678 18.2438L29.1049 13.3256C29.1283 13.0558 29.0413 12.7881 28.8638 12.5836L25.6276 8.85564C25.1335 8.28643 25.4229 7.39596 26.1572 7.22589L30.9665 6.11204C31.2303 6.05095 31.4581 5.88548 31.5977 5.65347L34.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M10.1432 1.42372C10.5319 0.777901 11.4681 0.777901 11.8568 1.42372L14.4023 5.65347C14.5419 5.88548 14.7697 6.05095 15.0335 6.11204L19.8428 7.22589C20.5771 7.39596 20.8665 8.28643 20.3723 8.85564L17.1362 12.5836C16.9587 12.7881 16.8717 13.0558 16.8951 13.3256L17.322 18.2438C17.3871 18.9947 16.6297 19.545 15.9356 19.251L11.3901 17.3253C11.1408 17.2196 10.8592 17.2196 10.6099 17.3253L6.06438 19.251C5.37034 19.545 4.61286 18.9947 4.67803 18.2438L5.10486 13.3256C5.12827 13.0558 5.04128 12.7881 4.86377 12.5836L1.62765 8.85564C1.13354 8.28643 1.42287 7.39596 2.15719 7.22589L6.96651 6.11204C7.23032 6.05095 7.45807 5.88548 7.59769 5.65347L10.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="mt-4 text-base font-medium">
+                                            "We had a water leakage late at night, and I honestly didn’t expect help that quick. But the plumber arrived in 40 minutes and fixed it professionally. Life-saver!"
+                                        </p>
+                                        <div class="mt-10">
+                                            <h3 class="mb-1 text-base font-semibold text-purple-700 dark:text-purple-300">Meena Iyer</h3>
+                                            <span class="text-xs font-medium italic">📍 Chennai | Plumbing Service (5/5)</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="inline-block">
+                                            <svg width="118" height="22" viewBox="0 0 118 22" fill="none">
+                                                <path
+                                                    d="M106.143 1.42372C106.532 0.777901 107.468 0.777901 107.857 1.42372L110.402 5.65347C110.542 5.88548 110.77 6.05095 111.033 6.11204L115.843 7.22589C116.577 7.39596 116.866 8.28643 116.372 8.85564L113.136 12.5836C112.959 12.7881 112.872 13.0558 112.895 13.3256L113.322 18.2438C113.387 18.9947 112.63 19.545 111.936 19.251L107.39 17.3253C107.141 17.2196 106.859 17.2196 106.61 17.3253L102.064 19.251C101.37 19.545 100.613 18.9947 100.678 18.2438L101.105 13.3256C101.128 13.0558 101.041 12.7881 100.864 12.5836L97.6276 8.85564C97.1335 8.28643 97.4229 7.39596 98.1572 7.22589L102.967 6.11204C103.23 6.05095 103.458 5.88548 103.598 5.65347L106.143 1.42372Z"
+                                                    fill="#E8E7EB"
+                                                />
+                                                <path
+                                                    d="M82.1432 1.42372C82.5319 0.777901 83.4681 0.777901 83.8568 1.42372L86.4023 5.65347C86.5419 5.88548 86.7697 6.05095 87.0335 6.11204L91.8428 7.22589C92.5771 7.39596 92.8665 8.28643 92.3724 8.85564L89.1362 12.5836C88.9587 12.7881 88.8717 13.0558 88.8951 13.3256L89.322 18.2438C89.3871 18.9947 88.6297 19.545 87.9356 19.251L83.3901 17.3253C83.1408 17.2196 82.8592 17.2196 82.6099 17.3253L78.0644 19.251C77.3703 19.545 76.6129 18.9947 76.678 18.2438L77.1049 13.3256C77.1283 13.0558 77.0413 12.7881 76.8638 12.5836L73.6276 8.85564C73.1335 8.28643 73.4229 7.39596 74.1572 7.22589L78.9665 6.11204C79.2303 6.05095 79.4581 5.88548 79.5977 5.65347L82.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M58.1432 1.42372C58.5319 0.777901 59.4681 0.777901 59.8568 1.42372L62.4023 5.65347C62.5419 5.88548 62.7697 6.05095 63.0335 6.11204L67.8428 7.22589C68.5771 7.39596 68.8665 8.28643 68.3724 8.85564L65.1362 12.5836C64.9587 12.7881 64.8717 13.0558 64.8951 13.3256L65.322 18.2438C65.3871 18.9947 64.6297 19.545 63.9356 19.251L59.3901 17.3253C59.1408 17.2196 58.8592 17.2196 58.6099 17.3253L54.0644 19.251C53.3703 19.545 52.6129 18.9947 52.678 18.2438L53.1049 13.3256C53.1283 13.0558 53.0413 12.7881 52.8638 12.5836L49.6276 8.85564C49.1335 8.28643 49.4229 7.39596 50.1572 7.22589L54.9665 6.11204C55.2303 6.05095 55.4581 5.88548 55.5977 5.65347L58.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M34.1432 1.42372C34.5319 0.777901 35.4681 0.777901 35.8568 1.42372L38.4023 5.65347C38.5419 5.88548 38.7697 6.05095 39.0335 6.11204L43.8428 7.22589C44.5771 7.39596 44.8665 8.28643 44.3724 8.85564L41.1362 12.5836C40.9587 12.7881 40.8717 13.0558 40.8951 13.3256L41.322 18.2438C41.3871 18.9947 40.6297 19.545 39.9356 19.251L35.3901 17.3253C35.1408 17.2196 34.8592 17.2196 34.6099 17.3253L30.0644 19.251C29.3703 19.545 28.6129 18.9947 28.678 18.2438L29.1049 13.3256C29.1283 13.0558 29.0413 12.7881 28.8638 12.5836L25.6276 8.85564C25.1335 8.28643 25.4229 7.39596 26.1572 7.22589L30.9665 6.11204C31.2303 6.05095 31.4581 5.88548 31.5977 5.65347L34.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                                <path
+                                                    d="M10.1432 1.42372C10.5319 0.777901 11.4681 0.777901 11.8568 1.42372L14.4023 5.65347C14.5419 5.88548 14.7697 6.05095 15.0335 6.11204L19.8428 7.22589C20.5771 7.39596 20.8665 8.28643 20.3723 8.85564L17.1362 12.5836C16.9587 12.7881 16.8717 13.0558 16.8951 13.3256L17.322 18.2438C17.3871 18.9947 16.6297 19.545 15.9356 19.251L11.3901 17.3253C11.1408 17.2196 10.8592 17.2196 10.6099 17.3253L6.06438 19.251C5.37034 19.545 4.61286 18.9947 4.67803 18.2438L5.10486 13.3256C5.12827 13.0558 5.04128 12.7881 4.86377 12.5836L1.62765 8.85564C1.13354 8.28643 1.42287 7.39596 2.15719 7.22589L6.96651 6.11204C7.23032 6.05095 7.45807 5.88548 7.59769 5.65347L10.1432 1.42372Z"
+                                                    fill="#FFD02C"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <p class="mt-4 text-base font-medium">
+                                            "Booked a 2BHK painting service for my parents' house. The team was polite, wore shoe covers, cleaned after themselves — and completed everything on time."
+                                        </p>
+                                        <div class="mt-10">
+                                            <h3 class="mb-1 text-base font-semibold text-purple-700 dark:text-purple-300">Vikram Rao</h3>
+                                            <span class="text-xs font-medium italic">📍 Jaipur | Home Painting (4.5/5)</span>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <button
+                                type="button"
+                                class="testimonial-button-next group absolute right-0 top-1/2 hidden -translate-y-1/2 text-primary duration-300 after:hidden hover:scale-110 md:inline-block"
+                            >
+                                <span
+                                    class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-linear-to-r from-transparent from-50% to-primary/40 to-50%"
+                                >
+                                    <svg width="22" height="12" viewBox="0 0 14 8" fill="none">
+                                        <path
+                                            d="M12.9 3.53991L10.06 0.689912C9.77 0.399912 9.29 0.399912 9 0.689912C8.71 0.979912 8.71 1.45991 9 1.74991L10.56 3.30991H0.989998C0.579998 3.30991 0.239998 3.64991 0.239998 4.05991C0.239998 4.46991 0.579998 4.80991 0.989998 4.80991H10.56L9 6.37991C8.71 6.66991 8.71 7.14991 9 7.43991C9.15 7.58991 9.34 7.65991 9.53 7.65991C9.72 7.65991 9.91 7.58991 10.06 7.43991L12.9 4.58991C13.2 4.29991 13.2 3.82991 12.9 3.53991Z"
+                                            fill="currentColor"
+                                        ></path>
+                                    </svg>
+                                    <span class="sr-only">Next</span>
+                                </span>
+                            </button>
+                            <button
+                                type="button"
+                                class="testimonial-button-prev absolute left-0 top-1/2 hidden -translate-y-1/2 rotate-180 text-primary duration-300 after:hidden hover:scale-110 md:inline-block"
+                            >
+                                <span
+                                    class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-linear-to-r from-transparent from-50% to-primary/40 to-50%"
+                                >
+                                    <svg width="22" height="12" viewBox="0 0 14 8" fill="none">
+                                        <path
+                                            d="M12.9 3.53991L10.06 0.689912C9.77 0.399912 9.29 0.399912 9 0.689912C8.71 0.979912 8.71 1.45991 9 1.74991L10.56 3.30991H0.989998C0.579998 3.30991 0.239998 3.64991 0.239998 4.05991C0.239998 4.46991 0.579998 4.80991 0.989998 4.80991H10.56L9 6.37991C8.71 6.66991 8.71 7.14991 9 7.43991C9.15 7.58991 9.34 7.65991 9.53 7.65991C9.72 7.65991 9.91 7.58991 10.06 7.43991L12.9 4.58991C13.2 4.29991 13.2 3.82991 12.9 3.53991Z"
+                                            fill="currentColor"
+                                        ></path>
+                                    </svg>
+                                    <span class="sr-only">Previous</span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="relative mx-auto flex w-full max-w-[1536px] flex-col items-center justify-between gap-x-4 gap-y-10 bg-secondary px-5 py-11 dark:bg-purple-900 sm:px-16 md:mb-10 lg:flex-row xl:rounded-lg"
+                >
+                    <img
+                        src="assets/images/news-latter-light.png"
+                        alt="News latter"
+                        class="absolute left-0 top-0 flex h-full w-full object-cover dark:hidden"
+                    />
+                    <img
+                        loading="lazy"
+                        src="assets/images/news-latter-dark.png"
+                        alt="News latter"
+                        class="absolute left-0 top-0 hidden h-full w-full object-cover dark:flex"
+                    />
+                    <div class="z-1 text-center lg:ltr:text-left lg:rtl:text-right">
+                        <h2 class="pb-3 text-[40px] font-extrabold leading-tight text-white">Newsletter</h2>
+                        <p>Get exclusive offers, new service updates & smart home tips — straight to your inbox.</p>
+                    </div>
+                    <div class="relative z-1 w-full max-w-md text-center">
+                        <input
+                            type="text"
+                            placeholder="Enter email address"
+                            class="w-full rounded-lg border border-primary bg-transparent px-5 py-3 text-base outline-hidden placeholder:text-purple-500 sm:pe-36"
+                        />
+                        <button type="button" class="btn end-0 top-0 mt-5 rounded-lg border border-primary py-3 sm:absolute sm:mt-0 sm:rounded-s-none">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="mt-auto">
+                <div class="mx-auto max-w-[1536px]">
+                    <div class="flex flex-col items-center justify-between gap-6 px-4 py-8 lg:flex-row">
+                        <div class="flex flex-col items-center gap-y-5 text-center md:flex-row md:text-left">
+                            <a href="index.html" class="shrink-0 border-purple-300 md:pe-8 md:ltr:border-r-2 md:rtl:border-l-2">
+                                <img loading="lazy" src="assets/images/logo-light.svg" alt="Logo" class="inline-flex dark:hidden" />
+                                <img loading="lazy" src="assets/images/logo-dark.svg" alt="Logo" class="hidden dark:inline-flex" />
+                            </a>
+                            <div class="md:ps-8">Join 50,000+ happy users who stay ahead!</div>
+                        </div>
+                        <ul class="inline-flex items-center gap-8 text-purple-400">
+                            <li>
+                                <a href="javascript:" class="inline-flex duration-300 hover:scale-125 hover:text-primary">
+                                    <svg width="26" height="27" viewBox="0 0 26 27" fill="none">
+                                        <path
+                                            d="M26 13.5C26 6.32029 20.1797 0.5 13 0.5C5.82029 0.5 0 6.32029 0 13.5C0 19.9886 4.75389 25.3668 10.9688 26.3421V17.2578H7.66797V13.5H10.9688V10.6359C10.9688 7.37781 12.9096 5.57812 15.879 5.57812C17.3009 5.57812 18.7891 5.83203 18.7891 5.83203V9.03125H17.1498C15.535 9.03125 15.0313 10.0334 15.0313 11.0625V13.5H18.6367L18.0604 17.2578H15.0313V26.3421C21.2461 25.3668 26 19.9886 26 13.5Z"
+                                            fill="currentColor"
+                                        />
+                                    </svg>
+                                    <span class="sr-only">Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:" class="inline-flex duration-300 hover:scale-125 hover:text-primary">
+                                    <svg width="26" height="23" viewBox="0 0 26 23" fill="none">
+                                        <path
+                                            d="M8.17934 22.0623C17.9882 22.0623 23.3548 13.9337 23.3548 6.88683C23.3548 6.65832 23.3497 6.42472 23.3396 6.19621C24.3835 5.44123 25.2845 4.50609 26 3.43472C25.0277 3.8673 23.9954 4.14981 22.9384 4.27261C24.0514 3.60547 24.8847 2.55741 25.284 1.32273C24.2369 1.94325 23.0919 2.38098 21.8979 2.61714C21.0934 1.76234 20.0297 1.19636 18.8713 1.00671C17.7129 0.817051 16.5243 1.01429 15.4892 1.56792C14.4541 2.12155 13.6303 3.00075 13.145 4.06957C12.6597 5.13839 12.54 6.33732 12.8045 7.48097C10.6844 7.37458 8.61026 6.82383 6.71665 5.86442C4.82303 4.90502 3.15217 3.55837 1.81238 1.91179C1.13143 3.08583 0.923061 4.4751 1.22962 5.79725C1.53617 7.1194 2.33465 8.27522 3.46277 9.0298C2.61585 9.00291 1.78747 8.77489 1.04609 8.36457V8.43058C1.04534 9.66265 1.47127 10.857 2.2515 11.8105C3.03173 12.764 4.1181 13.4179 5.32594 13.6611C4.54139 13.8757 3.71798 13.907 2.91941 13.7525C3.26024 14.812 3.92337 15.7388 4.81625 16.4033C5.70913 17.0679 6.78721 17.4371 7.90004 17.4595C6.01079 18.9435 3.67702 19.7485 1.27461 19.7446C0.848561 19.744 0.422932 19.7179 0 19.6664C2.44059 21.2322 5.27966 22.0638 8.17934 22.0623Z"
+                                            fill="currentColor"
+                                        />
+                                    </svg>
+                                    <span class="sr-only">Twitter</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:" class="inline-flex duration-300 hover:scale-125 hover:text-primary">
+                                    <svg width="26" height="27" viewBox="0 0 26 27" fill="none">
+                                        <path
+                                            d="M13 2.84102C16.4734 2.84102 16.8848 2.85625 18.2508 2.91719C19.5203 2.97305 20.2059 3.18633 20.6629 3.36406C21.2672 3.59766 21.7039 3.88203 22.1559 4.33398C22.6129 4.79102 22.8922 5.22266 23.1258 5.82695C23.3035 6.28398 23.5168 6.97461 23.5727 8.23906C23.6336 9.61016 23.6488 10.0215 23.6488 13.4898C23.6488 16.9633 23.6336 17.3746 23.5727 18.7406C23.5168 20.0102 23.3035 20.6957 23.1258 21.1527C22.8922 21.757 22.6078 22.1938 22.1559 22.6457C21.6988 23.1027 21.2672 23.382 20.6629 23.6156C20.2059 23.7934 19.5152 24.0066 18.2508 24.0625C16.8797 24.1234 16.4684 24.1387 13 24.1387C9.52656 24.1387 9.11524 24.1234 7.74922 24.0625C6.47969 24.0066 5.79414 23.7934 5.33711 23.6156C4.73281 23.382 4.29609 23.0977 3.84414 22.6457C3.38711 22.1887 3.10781 21.757 2.87422 21.1527C2.69648 20.6957 2.4832 20.0051 2.42734 18.7406C2.36641 17.3695 2.35117 16.9582 2.35117 13.4898C2.35117 10.0164 2.36641 9.60508 2.42734 8.23906C2.4832 6.96953 2.69648 6.28398 2.87422 5.82695C3.10781 5.22266 3.39219 4.78594 3.84414 4.33398C4.30117 3.87695 4.73281 3.59766 5.33711 3.36406C5.79414 3.18633 6.48477 2.97305 7.74922 2.91719C9.11524 2.85625 9.52656 2.84102 13 2.84102ZM13 0.5C9.4707 0.5 9.02891 0.515234 7.64258 0.576172C6.26133 0.637109 5.31172 0.860547 4.48906 1.18047C3.63086 1.51562 2.90469 1.95742 2.18359 2.68359C1.45742 3.40469 1.01563 4.13086 0.680469 4.98398C0.360547 5.81172 0.137109 6.75625 0.0761719 8.1375C0.0152344 9.52891 0 9.9707 0 13.5C0 17.0293 0.0152344 17.4711 0.0761719 18.8574C0.137109 20.2387 0.360547 21.1883 0.680469 22.0109C1.01563 22.8691 1.45742 23.5953 2.18359 24.3164C2.90469 25.0375 3.63086 25.4844 4.48398 25.8145C5.31172 26.1344 6.25625 26.3578 7.6375 26.4188C9.02383 26.4797 9.46563 26.4949 12.9949 26.4949C16.5242 26.4949 16.966 26.4797 18.3523 26.4188C19.7336 26.3578 20.6832 26.1344 21.5059 25.8145C22.359 25.4844 23.0852 25.0375 23.8063 24.3164C24.5273 23.5953 24.9742 22.8691 25.3043 22.016C25.6242 21.1883 25.8477 20.2438 25.9086 18.8625C25.9695 17.4762 25.9848 17.0344 25.9848 13.5051C25.9848 9.97578 25.9695 9.53399 25.9086 8.14766C25.8477 6.76641 25.6242 5.8168 25.3043 4.99414C24.9844 4.13086 24.5426 3.40469 23.8164 2.68359C23.0953 1.9625 22.3691 1.51562 21.516 1.18555C20.6883 0.865625 19.7438 0.642188 18.3625 0.58125C16.9711 0.515234 16.5293 0.5 13 0.5Z"
+                                            fill="currentColor"
+                                        />
+                                        <path
+                                            d="M13 6.82227C9.31328 6.82227 6.32227 9.81328 6.32227 13.5C6.32227 17.1867 9.31328 20.1777 13 20.1777C16.6867 20.1777 19.6777 17.1867 19.6777 13.5C19.6777 9.81328 16.6867 6.82227 13 6.82227ZM13 17.8316C10.6082 17.8316 8.66836 15.8918 8.66836 13.5C8.66836 11.1082 10.6082 9.16836 13 9.16836C15.3918 9.16836 17.3316 11.1082 17.3316 13.5C17.3316 15.8918 15.3918 17.8316 13 17.8316Z"
+                                            fill="currentColor"
+                                        />
+                                        <path
+                                            d="M21.5008 6.55801C21.5008 7.42129 20.8 8.117 19.9418 8.117C19.0785 8.117 18.3828 7.41621 18.3828 6.55801C18.3828 5.69473 19.0836 4.99902 19.9418 4.99902C20.8 4.99902 21.5008 5.69981 21.5008 6.55801Z"
+                                            fill="currentColor"
+                                        />
+                                    </svg>
+                                    <span class="sr-only">Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:" class="inline-flex duration-300 hover:scale-125 hover:text-primary">
+                                    <svg width="26" height="27" viewBox="0 0 26 27" fill="none">
+                                        <path
+                                            d="M24.0754 0.5H1.91953C0.858203 0.5 0 1.33789 0 2.37383V24.6211C0 25.657 0.858203 26.5 1.91953 26.5H24.0754C25.1367 26.5 26 25.657 26 24.6262V2.37383C26 1.33789 25.1367 0.5 24.0754 0.5ZM7.71367 22.6559H3.8543V10.2449H7.71367V22.6559ZM5.78398 8.55391C4.54492 8.55391 3.54453 7.55352 3.54453 6.31953C3.54453 5.08555 4.54492 4.08516 5.78398 4.08516C7.01797 4.08516 8.01836 5.08555 8.01836 6.31953C8.01836 7.54844 7.01797 8.55391 5.78398 8.55391ZM22.1559 22.6559H18.3016V16.623C18.3016 15.1859 18.2762 13.3324 16.2957 13.3324C14.2898 13.3324 13.9852 14.9016 13.9852 16.5215V22.6559H10.1359V10.2449H13.8328V11.941H13.8836C14.3965 10.966 15.6559 9.93516 17.5297 9.93516C21.4348 9.93516 22.1559 12.5047 22.1559 15.8461V22.6559Z"
+                                            fill="currentColor "
+                                        />
+                                    </svg>
+                                    <span class="sr-only">Linkedin</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="border-y-2 border-purple-200 px-4 py-10 dark:border-purple-900">
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-10 leading-6 sm:grid-cols-3 lg:grid-cols-5 lg:justify-items-center">
+                            <div>
+                                <h3 class="pb-8 font-bold text-purple-700 dark:text-white">Quick menu</h3>
+                                <ul class="space-y-5 font-medium">
+                                    <li><a href="index.html" class="relative text-primary duration-300">Home</a></li>
+                                    <li><a href="service-list.html" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Services</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="pb-8 font-bold text-purple-700 dark:text-white">Company</h3>
+                                <ul class="space-y-5 font-medium">
+                                    <li><a href="about-us.html" class="relative start-0 duration-300 hover:start-2 hover:text-primary">About us</a></li>
+                                    <li><a href="javascript:" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Help & support</a></li>
+                                    <li><a href="contact-us.html" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Contact us</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="pb-8 font-bold text-purple-700 dark:text-white">About us</h3>
+                                <ul class="space-y-5 font-medium">
+                                    <li><a href="faq.html" class="relative start-0 duration-300 hover:start-2 hover:text-primary">FAQ</a></li>
+                                    <li><a href="javascript:" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Customer support</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="pb-8 font-bold text-purple-700 dark:text-white">Legal</h3>
+                                <ul class="space-y-5 font-medium">
+                                    <li>
+                                        <a href="terms-condition.html" class="relative start-0 duration-300 hover:start-2 hover:text-primary"
+                                            >Terms & condition</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="privacy-policy.html" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Privacy policy</a>
+                                    </li>
+                                    <li><a href="javascript:" class="relative start-0 duration-300 hover:start-2 hover:text-primary">License</a></li>
+                                    <li><a href="javascript:" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Refund policy</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="pb-8 font-bold text-purple-700 dark:text-white">Plans</h3>
+                                <ul class="space-y-5 font-medium">
+                                    <li><a href="javascript:" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Pricing</a></li>
+                                    <li><a href="javascript:" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Premium support</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-6 text-center text-base text-purple-400">
+                        Copyright © <span class="curr-year"></span> Nobble. All rights reserved.
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Back To Top Arrow -->
+        <div id="scrollToTopBtn" class="group fixed bottom-5 z-10 animate-bounce ltr:right-5 rtl:left-5" onclick="scrollToTop()">
+            <button
+                type="button"
+                class="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white transition duration-300 group-hover:bg-secondary dark:group-hover:bg-purple-700"
+            >
+                <span class="h-6 w-6 transition">
+                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-full w-full">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+                    </svg>
+                    <span class="sr-only">Scroll to top</span>
+                </span>
+            </button>
+        </div>
+
+        <!-- Swiper Slider Js -->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+        <!-- Counter Js -->
+        <script src="assets/js/vanilla-counter.js"></script>
+        <!-- accordion -->
+        <script src="assets/js/accordion.min.js"></script>
+        <!-- Animation -->
+        <script src="assets/js/aos.js"></script>
+        <!-- Custom Js -->
+        <script src="assets/js/custom.js"></script>
+
+        <script>
+            // Testimonial Slider
+            var testimonialThumb = new Swiper('.testimonial-thumb', {
+                loop: true,
+                slideToClickedSlide: true,
+                loopedSlides: 4,
+                spaceBetween: 10,
+                slidesPerView: 'auto',
+                centeredSlides: true,
+                breakpoints: {
+                    640: {
+                        slidesPerView: 3,
+                    },
+                    1000: {
+                        slidesPerView: 5,
+                    },
+                    1536: {
+                        slidesPerView: 7,
+                    },
+                },
+            });
+            var testimonial = new Swiper('.testimonial', {
+                loop: true,
+                spaceBetween: 10,
+                loopedSlides: 4,
+                navigation: {
+                    nextEl: '.testimonial-button-next',
+                    prevEl: '.testimonial-button-prev',
+                },
+            });
+            testimonial.controller.control = testimonialThumb;
+            testimonialThumb.controller.control = testimonial;
+
+            // Logo Slider
+            var logoSlider = new Swiper('.logo-slider', {
+                loop: true,
+                slidesPerView: 1.5,
+                spaceBetween: 18,
+                speed: 1000,
+                autoplay: {
+                    delay: 500,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    600: {
+                        slidesPerView: 2,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                    },
+                    1000: {
+                        slidesPerView: 4,
+                    },
+                    1142: {
+                        slidesPerView: 5,
+                    },
+                    1536: {
+                        slidesPerView: 6,
+                    },
+                },
+            });
+
+            // Accordion
+            const acc = new Accordion('.accordion-container');
+            acc.open(0);
+
+            // Counter Js
+            VanillaCounter();
+        </script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "NOBBLE",
+                "url": "https://nobble-html.vercel.app",
+                "id": "https://nobble-html.vercel.app#organization",
+                "logo": "https://nobble-html.vercel.app/assets/images/logo-light.svg",
+                "legalName": "NOBBLE",
+                "sameAs": ["https://nobble-html.vercel.app"]
+            }
+        </script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "NOBBLE",
+                "url": "https://nobble-html.vercel.app",
+                "id": "https://nobble-html.vercel.app#website"
+            }
+        </script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Do you offer a free trial?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How do i create an account?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What protections does your system use to protect our data?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Data protection strategies typically involve multi-step processes that define how security measures are implemented and maintained."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What type of support is included with this service?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do you have premium plans for products?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Who else is using nobble tool?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        }
+                    }
+                ]
+            }
+        </script>
+    </body>
+</html>
