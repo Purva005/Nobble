@@ -2,11 +2,10 @@
   "name": "nobble",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://purva005/Nobble/public/index.html",
-  "predeploy": "npm run build",
+  "homepage": "https://purva005.github.io/Nobble",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -20,5 +19,8 @@
     ">0.2%",
     "not dead",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }
